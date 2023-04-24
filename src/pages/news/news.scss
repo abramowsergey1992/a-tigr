@@ -1,0 +1,37 @@
+.news-detail {
+	h1 {
+		margin-bottom: 25px;
+	}
+
+	&__top {
+		img {
+			margin-top: 30px;
+		}
+	}
+
+	&__tags {
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		flex-wrap: wrap;
+		font-weight: 400;
+		font-size: 14px;
+		line-height: 28px;
+
+		li:not(:last-child)::after {
+			content: '|';
+			margin-left: 3px;
+			margin-right: 3px;
+		}
+	}
+}
+
+.another-news {
+	padding-top: 110px;
+	border-top: 1px solid #ECECEC;
+
+	@media(max-width:992px) {
+		border: 0 solid;
+		padding-top: 60px;
+	}
+}

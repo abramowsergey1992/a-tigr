@@ -1,0 +1,41 @@
+.breadcrumb {
+	font-weight: 400;
+	font-size: 14px;
+	line-height: 24px;
+	margin-bottom: 20px;
+	white-space: nowrap;
+	max-width: 100%;
+	overflow-x: auto;
+
+	&__list {
+		display: flex;
+		flex-direction: row;
+	}
+
+	&__item {
+		color: $orange;
+
+		&::after {
+			display: inline-block;
+			content: "/";
+			color: #D1D1D1;
+			margin: 0 8px;
+		}
+
+		&:last-child::after {
+			display: none;
+		}
+	}
+
+	&__link {
+		text-decoration: none;
+		color: #D1D1D1;
+		transition: 0.3s color;
+
+		&:hover {
+			color: $orange;
+		}
+	}
+
+	&__link-current {}
+}

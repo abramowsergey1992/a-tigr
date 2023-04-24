@@ -1,0 +1,124 @@
+.big-title {
+	@include clampf(92px, 128px);
+	font-family: 'Unbounded';
+	font-style: normal;
+	font-weight: 700;
+	margin-bottom: 40px;
+}
+
+picture {
+	display: block;
+
+	img {
+		display: block;
+	}
+}
+
+.h1,
+h1 {
+	font-family: 'Unbounded';
+	font-style: normal;
+	font-weight: 300;
+	@include clampf(40px, 82px);
+	@include lh(82, 102);
+	letter-spacing: -1px;
+	margin-bottom: 40px;
+}
+
+.h2,
+h2 {
+	font-family: 'Unbounded';
+	font-style: normal;
+	font-weight: 600;
+	@include clampf(24px, 48px);
+	@include lh(82, 102);
+	letter-spacing: -1px;
+	margin-bottom: 40px;
+}
+
+.h3,
+h3 {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 600;
+	@include clampf(20px, 48px);
+	@include lh(32, 48);
+	letter-spacing: -1px;
+}
+
+.h4,
+h4 {
+	font-family: 'Manrope';
+	font-style: normal;
+	font-weight: 500;
+	@include clampf(20px, 32px);
+	@include lh(32, 44);
+	letter-spacing: -1px;
+	margin-bottom: 10px;
+}
+
+p {
+	font-family: 'Manrope';
+	line-height: 175%;
+
+	b {
+		font-weight: 600;
+	}
+}
+
+.text {
+	img {
+		margin: 50px 0;
+		object-fit: cover;
+		min-height: 486px;
+	}
+
+	p {
+		margin-bottom: 10px;
+	}
+
+
+	blockquote {
+		background: #F9F9F9;
+		padding: 40px 35px;
+		margin: 40px 0;
+
+		@media(max-width:992px) {
+			padding: 30px 20px;
+			margin: 30px 0;
+		}
+
+		[layout="black"] & {
+			background: #161616;
+		}
+
+		p {
+			font-weight: 600;
+			margin-bottom: 20px;
+
+			@media(max-width:992px) {
+				margin-bottom: 10px;
+			}
+
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+
+		q {
+			font-size: 12px;
+			line-height: 20px;
+			display: block;
+
+			&:not(:last-child) {
+				margin-bottom: 10px;
+			}
+
+			&::after,
+			&::before {
+				display: none;
+
+			}
+		}
+	}
+}

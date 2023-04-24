@@ -1,0 +1,121 @@
+.img-slider {
+	margin: 50px 0;
+
+	@media(max-width:992px) {
+		margin: 30px 0;
+	}
+
+	@media(min-width:1118px) {
+		margin-left: -114px !important;
+		margin-right: -114px !important;
+	}
+
+	&__prev,
+	&__next {
+		cursor: pointer;
+
+		path[fill] {
+			fill: #fff;
+		}
+
+		path[stroke] {
+			stroke: #fff;
+		}
+
+		._mob {
+			display: none;
+		}
+
+		@media(max-width:992px) {
+			._desc {
+				display: none;
+			}
+
+			._mob {
+				display: block;
+			}
+		}
+
+		&:hover {
+			path[fill] {
+				fill: $orange
+			}
+
+			path[stroke] {
+				stroke: $orange
+			}
+		}
+	}
+
+	&__nav {
+		display: flex;
+		flex-direction: row;
+		gap: 35px;
+		position: absolute;
+		z-index: 4;
+		right: 50px;
+		bottom: 45px;
+
+		@media(max-width:992px) {
+			right: 18px;
+			bottom: 19px;
+			gap: 20px;
+
+		}
+	}
+
+	&__pagi {
+		font-family: 'Unbounded';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		position: absolute;
+		left: 41px;
+		z-index: 3;
+		color: #fff;
+		bottom: 52px;
+		letter-spacing: -0.02em;
+
+		@media(max-width:992px) {
+			left: 18px;
+			bottom: 19px;
+		}
+	}
+
+	.swiper-slide {
+		position: relative;
+		min-height: 486px;
+
+		&::before {
+			padding-bottom: 56.17%;
+			display: block;
+			content: '';
+		}
+
+		img {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			z-index: 1;
+			margin: 0;
+
+
+		}
+
+		&::after {
+			position: absolute;
+			z-index: 2;
+			background: linear-gradient(180deg, rgba(14, 14, 14, 0) 0%, rgba(14, 14, 14, 0.6) 100%);
+			width: 100%;
+			height: 75%;
+			left: 0;
+			bottom: 0;
+			display: block;
+			content: '';
+		}
+	}
+}

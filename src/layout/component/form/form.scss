@@ -1,0 +1,160 @@
+.btn-1 {
+	border: 2px solid $orange;
+	padding: 10px 20px;
+	border-radius: 10px;
+	font-family: 'Unbounded';
+	font-style: normal;
+	font-weight: 500;
+	font-size: 16px;
+	line-height: 20px;
+	background: var(--bg);
+	color: var(--color);
+	display: inline-block;
+	position: relative;
+	letter-spacing: -0.02em;
+	overflow: hidden;
+	text-decoration: none;
+
+	@media(max-width:992px) {
+		padding: 10px 17px;
+	}
+
+	&:active {
+		border-color: $orangeD;
+
+		.btn-1__circle {
+			background: $orangeD;
+		}
+	}
+
+	&:hover {
+		.btn-1__circle {
+			width: 110%;
+			transform: translateY(-50%) translateX(-50%);
+		}
+
+		.btn-1__overflow {
+			span {
+				&:first-child {
+					transform: translateY(-100%);
+				}
+
+				&:last-child {
+					transform: translateY(0%);
+				}
+			}
+		}
+	}
+
+	&__circle {
+		position: absolute;
+		width: 50px;
+		transform: translateY(30px) translateX(-50%);
+		left: 50%;
+		top: 50%;
+		display: block;
+		background: $orange;
+		border-radius: 100%;
+		transition: width 0.6s, transform 0.6s;
+
+		.btn-1._no-transition & {
+			transition: none !important;
+		}
+
+		.btn-1._out & {
+			width: 50px;
+			transform: translateY(-75px) translateX(-50%);
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			padding-bottom: 100%;
+		}
+	}
+
+	&__overflow {
+		display: block;
+		position: relative;
+		overflow: hidden;
+
+		span {
+			transition: transform 0.25s;
+			display: inline-block;
+
+			&:last-child {
+				position: absolute;
+				color: #fff;
+				top: 0;
+				transform: translateY(100%);
+				left: 0;
+			}
+		}
+	}
+}
+
+.input {
+	display: block;
+	position: relative;
+	padding-top: 15px;
+
+	&__title {
+		position: absolute;
+		left: 20px;
+
+		font-style: normal;
+		font-weight: 700;
+		font-size: 14px;
+		line-height: 20px;
+		padding: 5px;
+		top: 0;
+		z-index: 2;
+		background: #fff;
+	}
+
+	input {
+		z-index: 1;
+		border: 1px solid;
+		padding: 19px 20px 15px;
+		border-radius: 10px;
+		font-family: 'Manrope';
+		font-style: normal;
+		font-weight: 400;
+		font-size: 16px;
+		display: block;
+		line-height: 24px;
+		width: 100%;
+		max-width: 551px;
+
+		&::placeholder {
+			color: #D9D9D9;
+		}
+
+		&:placeholder-shown {
+			border-color: #D9D9D9;
+		}
+
+		&:focus-visible,
+		&:focus {
+			border-color: #838383 !important;
+		}
+
+		&.valid {
+			border-color: #D9D9D9;
+			;
+		}
+
+		&.error {
+			border-color: rgba(192, 34, 34, 1);
+			color: rgba(192, 34, 34, 1);
+
+			&:placeholder {
+				color: rgba(192, 34, 34, 1);
+			}
+		}
+
+		&:hover {
+			border-color: rgba(226, 109, 20, 0.2);
+		}
+	}
+}

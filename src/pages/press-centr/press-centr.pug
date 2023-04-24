@@ -1,0 +1,29 @@
+extends ../../layout/layout-white
+block title
+	title Пресс-центр
+block content
+	main(data-barba="container" data-barba-namespace="pressCentr").inner.press-centr
+		+breadcrumb(['Главная'], 'Пресс-центр')
+		h1 Пресс-центр
+		// тут в data атрибутах формируется ссылка по которой будет уходить аякс, в ответе должены быть только .news без лайаута
+		// сформированынй запрос и ответ выводятся в консоль
+		.press-centr__filters(data-url="press-center-ajax.html",data-category="category",data-page="page")
+			.press-centr__filter-title Направления деятельности:
+			button.press-centr__filter(type="button",data-filter="category-1") Охрана тигра, его среды обитания и кормовой базы
+			button.press-centr__filter(type="button",data-filter="category-2") Разрешение конфликтных ситуаций
+			button.press-centr__filter(type="button",data-filter="category-3") Поддержка коренных народов
+			button.press-centr__filter(type="button",data-filter="category-4") Правая деятельность
+			button.press-centr__filter(type="button",data-filter="category-5") Наука
+			button.press-centr__filter(type="button",data-filter="category-6") Просвещение
+			button.press-centr__filter(type="button",data-filter="category-7") Международная деятельность
+
+		.press-centr__grid.news-grid
+			+news('Дальневосточный институт университета прокуратуры РФ  и центр «Амурский тигр» подписали соглашение о сотрудничестве','19.01.2023', 'Новости','n-1')._big
+			+news('Идёт отбор участников в студенческий отряд «Тигр» 2023','17.01.2023', 'Новости','n-2')._big
+			+news('Амба вернулась в Амурскую область из Китая','11.01.2023', 'Новости','n-3',)
+			+news('Про тигрят из Еврейской автономной области и их мать','10.01.2023', 'Новости','n-4')
+			+news('Новогодние мероприятия  в нацпарке «Бикин»','16.01.2023', 'Новости','n-5')
+			+news('Фотоотчет: международный день тигра в парке «зарядье»','05.01.2023', 'Новости','n-6')
+			+news('«Российская газета»: двух амурских тигров выпустят весной в дикую природу','06.01.2023', 'Пресса','n-7')
+			+news('Центр «Амурский тигр» поздравляет с новым 2023 годом','08.01.2023', 'Новости','n-8')
+		button.press-centr__more.btn-1(type="button") Больше новостей

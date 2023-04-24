@@ -1,0 +1,37 @@
+
+mixin picture(name, ext)
+	picture
+		if ext!='svg'
+			source(type="image/webp",srcset="img/"+name+".webp")
+		img(class!=attributes.class, alt="",src="img/"+name+"."+ext)
+
+mixin news(title,data,type,img,filter="")
+	.news(class!=attributes.class)
+		.news__img 
+			+picture(img,'jpg')
+		.news__content
+			ul.news__tags
+				li= data
+				li= type
+			a.news__title(href="news.html")= title
+mixin img(name)
+	img(class!=attributes.class, alt="",src="img/"+name)
+
+
+
+mixin svgSprite(name)
+	svg.icon(class=` _${name}`)
+		use(xlink:href='img/sprite.svg#' + name)
+
+//- +breadcrumb(['Main page', 'News'], 'News detail')
+mixin breadcrumb(items, last)
+	.breadcrumb
+		ul.breadcrumb__list&attributes(attributes)
+			each item in items
+				li.breadcrumb__item
+					a(href="#" title=item).breadcrumb__link= item
+
+			if last
+				li.breadcrumb__item
+					span.breadcrumb__link-current= last
+			else

@@ -1,0 +1,54 @@
+extends ../../layout/layout-white
+block title
+	title Контакты
+block content
+	main(data-barba="container" data-barba-namespace="contact").inner
+		+breadcrumb(['Главная'], 'Контакты')
+		.contact
+			h1 Контакты
+			.contact__wrap
+				.contact__toggle-wrap 
+					ul
+						li.contact__toggle-bg
+						li
+							button(type="button",data-slide="0",data-coord="55.766947,37.642069")._active Москва
+						li
+							button(type="button",data-slide="1",data-coord="43.113298,131.89259") Владивосток
+					
+				.swiper.contact__slider
+					.swiper-wrapper
+						.swiper-slide.contact__slide._black
+							.contact__slide-city Москва
+							p 101000, г. Москва, ул. Мясницкая, д. 40, стр. 4.
+							ul.contact__slide-contact 
+								li 
+									a(href="tel:+74956408996") +7 495 640-89-96
+								li 
+									a(href="mailto:info@amur-tiger.ru") info@amur-tiger.ru
+							.contact__press
+								.contact__press-title Пресс-служба
+								.contact__press-name Андрей Шоршин
+								p 
+									a(href="tel:+74956408996,11") +7 495 640-89-96 доб. 11
+								p 
+									a(href="mailto:a.shorshin@amur-tiger.ru") a.shorshin@amur-tiger.ru
+							.contact__history 
+								a.btn-1(href="history-moskow.html") История здания филиала 
+						.swiper-slide.contact__slide._orange
+							.contact__slide-city Владивосток
+							p 690091, Приморский край, г. Владивосток, ул. Петра Великого, д. 4
+							ul.contact__slide-contact 
+								li 
+									a(href="tel:+74232221448") +7 4232 22-14-48
+								li 
+									a(href="mailto:feb@amur-tiger.ru") feb@amur-tiger.ru
+							.contact__press
+								.contact__press-title Пресс-служба
+								.contact__press-name Андрей Шоршин
+								p 
+									a(href="tel:+74956408996,11") +7 495 640-89-96 доб. 11
+								p 
+									a(href="mailto:a.shorshin@amur-tiger.ru") a.shorshin@amur-tiger.ru
+							.contact__history 
+								a.btn-1(href="history-vladivostok.html") История здания филиала 
+				#contact-map(data-marker="img/marker.svg")

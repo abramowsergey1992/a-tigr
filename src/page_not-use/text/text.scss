@@ -1,0 +1,363 @@
+.container {
+	max-width: 1400px;
+	padding-left: 20px;
+	padding-right: 20px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.header {
+	margin-bottom: 40px;
+	&__mail {
+		grid-area: mail;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		letter-spacing: -0.02em;
+		color: #1b1a22;
+		margin-right: 30px;
+		@media (max-width: 750px) {
+			margin-right: 0;
+		}
+		&:hover {
+			text-decoration: none;
+		}
+	}
+	&__phone {
+		grid-area: phone;
+		font-weight: 400;
+		font-size: 16px;
+		line-height: 19px;
+		letter-spacing: -0.02em;
+		color: #1b1a22;
+		text-decoration: none;
+		margin-right: 30px;
+		transition: color 0.3s;
+		@media (max-width: 750px) {
+			margin-right: 0;
+		}
+		&:hover {
+			color: #0090ff;
+		}
+	}
+	&__telegram {
+		grid-area: telegram;
+		padding: 1px;
+		border-radius: 30px;
+		line-height: 18px;
+		display: inline-block;
+		background: linear-gradient(108.82deg, #00dfbd 0%, #0090ff 100%);
+		&:hover {
+			svg {
+				transform: scale(1.3);
+			}
+		}
+		span {
+			border-radius: 30px;
+			padding: 8px 10px;
+			padding-right: 13px;
+			display: inline-block;
+			background: #fff;
+			font-weight: 400;
+			font-size: 16px;
+			position: relative;
+			padding-left: 36px;
+
+			/* identical to box height */
+			svg {
+				left: 10px;
+				margin-right: 10px;
+				position: absolute;
+				top: 50%;
+				margin-top: -9px;
+				transition: transform 0.3s;
+			}
+			letter-spacing: -0.04em;
+
+			color: #1b1a22;
+		}
+	}
+	&__logo {
+		grid-area: logo;
+		margin-right: auto;
+		max-width: 197px;
+		width: 100%;
+	}
+	&__row {
+		display: flex;
+		align-items: center;
+		flex-direction: row;
+		@media (max-width: 750px) {
+			display: grid;
+			grid-gap: 5px 20px;
+			grid-template-columns: auto 159px;
+			grid-template-areas:
+				"logo mail"
+				"logo phone"
+				"logo telegram";
+		}
+	}
+	@media (max-width: 750px) {
+		padding-top: 20px;
+		padding-bottom: 20px;
+	}
+	padding: 40px 0 25px;
+	border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+h1,
+.h1,
+.h3,
+h3 {
+	background: linear-gradient(108.82deg, #00dfbd 0%, #0090ff 100%);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	background-clip: text;
+	text-fill-color: transparent;
+}
+
+h1,
+.h1 {
+	font-family: "TT Hoves";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 36px;
+	margin-top: 60px;
+	margin-bottom: 30px;
+	line-height: 133%;
+	letter-spacing: -0.02em;
+	@media (max-width: 990px) {
+		font-size: 30px;
+		margin-top: 50px;
+	}
+}
+h2,
+.h2 {
+	font-family: "TT Hoves";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 36px;
+	line-height: 133%;
+	letter-spacing: -0.02em;
+
+	color: #1b1a22;
+
+	margin-top: 70px;
+	margin-bottom: 27px;
+	@media (max-width: 990px) {
+		font-size: 26px;
+		margin-top: 50px;
+	}
+}
+h3,
+.h3 {
+	margin-top: 60px;
+	margin-bottom: 30px;
+	font-family: "TT Hoves";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 24px;
+	line-height: 28px;
+	letter-spacing: -0.04em;
+	margin-bottom: 25px;
+}
+p {
+	max-width: 805px;
+	font-weight: 400;
+	margin-bottom: 10px;
+	font-family: "TT Hoves";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 18px;
+	line-height: 156%;
+	/* or */
+
+	letter-spacing: -0.02em;
+	b {
+		font-weight: bold;
+	}
+	u {
+		text-decoration: none;
+		position: relative;
+		&::after {
+			height: 1px;
+			display: block;
+			content: "";
+			width: 100%;
+			position: absolute;
+			bottom: -3px;
+			background: linear-gradient(108.82deg, #00dfbd 0%, #0090ff 100%);
+		}
+	}
+}
+
+ul {
+	li {
+		margin-bottom: 16px;
+		p {
+		}
+	}
+	&.style {
+		li {
+			margin-bottom: 13px;
+			position: relative;
+			padding-left: 16px;
+			&::after {
+				display: block;
+				width: 6px;
+				height: 6px;
+				border-radius: 50%;
+				left: 0;
+				background: linear-gradient(
+					108.82deg,
+					#00dfbd 0%,
+					#0090ff 100%
+				);
+
+				position: absolute;
+				content: "";
+				top: 10px;
+			}
+		}
+	}
+}
+.form {
+	&__row {
+		display: grid;
+		align-items: center;
+		grid-gap: 20px;
+		grid-template-columns: 1fr 1fr 1fr 180px;
+		@media (max-width: 990px) {
+			grid-template-columns: 1fr 1fr;
+		}
+		@media (max-width: 500px) {
+			grid-template-columns: 1fr;
+		}
+	}
+	input {
+		border: 1px solid #c3c3c3;
+		box-sizing: border-box;
+		border-radius: 6px;
+		font-family: "TT Hoves";
+		padding: 15px 20px;
+		&::placeholder {
+			color: #c3c3c3;
+		}
+	}
+	button {
+		position: relative;
+		border: 0px solid;
+		border-radius: 6px;
+		overflow: hidden;
+		font-family: "TT Hoves";
+		padding: 15px 20px;
+		cursor: pointer;
+		span {
+			position: relative;
+			z-index: 10;
+			font-size: 16px;
+			line-height: 19px;
+			letter-spacing: -0.02em;
+			color: #ffffff;
+			font-weight: 500;
+		}
+		&::before {
+			background: linear-gradient(108.82deg, #00dfbd 0%, #0090ff 100%);
+			width: 200%;
+			display: block;
+			position: absolute;
+			left: 0;
+			height: 100%;
+			top: 0;
+			z-index: 1;
+			content: "";
+			transition: left 1s;
+		}
+		&:hover::before {
+			left: -100%;
+		}
+	}
+	&__telegram {
+		padding-left: 36px;
+		position: relative;
+		text-decoration: none;
+		&:hover {
+			svg {
+				transform: scale(1.3);
+			}
+		}
+		svg {
+			left: 10px;
+			margin-right: 10px;
+			position: absolute;
+			top: 50%;
+			margin-top: -9px;
+			transition: transform 0.3s;
+		}
+		span {
+			background: linear-gradient(108.82deg, #00dfbd 0%, #0090ff 100%);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+			background-clip: text;
+			text-fill-color: transparent;
+			font-weight: 400;
+		}
+	}
+}
+.page {
+	padding-bottom: 78px;
+	&__form {
+		margin-top: 30px;
+		h2,
+		.h2 {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.telegram {
+	padding-left: 36px;
+	position: relative;
+	text-decoration: none;
+	display: inline-block;
+	&:hover {
+		svg {
+			// transform: scale(1.3);
+		}
+		span {
+			text-decoration: none;
+			border-bottom: 1px solid transparent;
+		}
+	}
+	svg {
+		left: 0px;
+		margin-right: 10px;
+		position: absolute;
+		top: 50%;
+		margin-top: -16px;
+		width: 30px;
+		transition: transform 0.3s;
+	}
+	span {
+		color: #0390ff;
+		font-weight: 400;
+		font-size: 30px;
+		border-bottom: 1px solid;
+	}
+}
+
+.soc-row {
+	display: flex;
+	flex-direction: row;
+	gap: 20px;
+	flex-wrap: wrap;
+	align-items: center;
+}
+.phone {
+	color: #0559b3;
+	font-weight: 500;
+	font-size: 26px;
+	text-decoration: none;
+	transition: color 0.3s;
+	&:hover {
+		color: #0090ff;
+	}
+}

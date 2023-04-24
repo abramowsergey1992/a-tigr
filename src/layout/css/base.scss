@@ -1,0 +1,89 @@
+body {
+	font-family: 'Manrope';
+	background-color: var(--bg);
+	background-image: url('../img/noise.png');
+	background-repeat: repeat;
+	color: var(--color);
+	transition: background 0.3s;
+	--bg: #fff;
+	--color: #0E0E0E;
+
+	&[layout="white"] {
+		--bg: #fff;
+		--color: #0E0E0E;
+	}
+
+	&[layout="black"] {
+
+		--bg: #0E0E0E;
+		--color: #fff;
+
+	}
+
+	&._pmenu-animate,
+	&._no-scroll {
+		overflow: hidden;
+	}
+}
+
+.page {
+	overflow: hidden;
+	display: flex;
+	padding-top: 100px;
+	flex-direction: column;
+	min-height: 100svh;
+}
+
+body img {
+	max-width: 100%;
+}
+
+* {
+	-webkit-box-decoration-break: clone;
+	isolation: isolate;
+}
+
+.inner {
+	padding: 0 48px;
+
+	@media(max-width:992px) {
+		padding: 0 20px;
+	}
+
+	@media(max-width:500px) {
+		padding: 0 12px;
+	}
+}
+
+.inner-big {
+	max-width: 1118px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.inner-small {
+	max-width: 890px;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.autor {
+	border-top: 1px solid #272727;
+	padding-top: 30px;
+
+	margin: 30px 0;
+
+	a {
+		color: var(--color);
+		text-decoration: underline;
+		text-underline-offset: under;
+
+		&:hover {
+			text-decoration: none;
+		}
+	}
+
+	body[layout="white"] & {
+		border-top: 1px solid #D1D1D1;
+	}
+}

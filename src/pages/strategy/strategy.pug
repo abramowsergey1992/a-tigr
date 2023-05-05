@@ -1,0 +1,72 @@
+extends ../../layout/layout-wb
+block title
+	title Спонсоры
+block content
+	main(data-barba="container" data-barba-namespace="default").inner.sponsor-page
+		+breadcrumb(['Главная'], 'Стратегия сохранения Амурского тигра')
+		h1 Стратегия сохранения
+			br
+			| Амурского тигра
+		.block.one-img 
+			+picture('strategy-1','jpg')
+		.strategy-1.block
+			.strategy-1__row
+				.strategy-1__left
+					.strategy-1__title Амурский тигр (Panthera tigris altaica) — самый северный подвид тигра, наиболее крупного и некогда широко распространённого в Азии представителя семейства Кошачьих (Felidae).
+				.strategy-1__right 
+					.strategy-1__slider-wrap
+						.strategy-1-slider.swiper
+							.swiper-wrapper
+								.swiper-slide
+									.strategy-1-slider__content
+										.strategy-1-slider__title  95
+											small %
+										p популяции Амурского тигра в мире сосредоточено на территории Приморского и Хабаровского краёв, Амурской области и Еврейской автономной области России
+								.swiper-slide
+									.strategy-1-slider__content
+										.strategy-1-slider__title 200
+											small
+												| тыс. км<sup>2</sup>
+										p Общая площадь ареала амурского тигра в России в настоящее время
+								.swiper-slide
+									.strategy-1-slider__content
+										.strategy-1-slider__title 17–28
+											small %
+										p составляет естественная гибель
+								.swiper-slide._orange
+									.strategy-1-slider__content
+										.strategy-1-slider__title 72–83
+											small % 
+										p случаев — гибели тигров  по вине человека, главным образом в результате браконьерства
+							.strategy-1-slider__pagi
+					a.strategy-1__link(href="#") 
+						span Стратегия сохранения амурского тигра в Российской федерации
+
+		.blackzone
+			.block 
+				.h2 Первоочередные меры 
+					br
+					| по сохранению Амурского
+					br
+					| тигра РФ
+				.strategy-2
+					.strategy-2__it 
+						span Развитие международного сотрудничества
+					.strategy-2__it 
+						span Совершенствование нормативной правовой базы
+					.strategy-2__it 
+						span Совершенствование сети особо охраняемых природных территорий
+					.strategy-2__it 
+						span Повышение эффективности охраны амурского тигра вне особо охраняемых природных территорий
+					.strategy-2__it 
+						span Научные исследования
+					.strategy-2__it 
+						span Мониторинг состояния популяции амурского тигра
+					.strategy-2__it 
+						span Предотвращение и разрешение конфликтных ситуаций
+					.strategy-2__it 
+						span Просветительская и образовательная деятельность
+					a.strategy-2__doc(href="#")
+						span Стратегия сохранения амурского тигра в Российской федерации
+			include ../../layout/component/big-slider/big-slider
+			include ../../layout/component/footer/footer

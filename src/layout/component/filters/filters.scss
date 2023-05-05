@@ -1,0 +1,28 @@
+.filters {
+	padding: 4px;
+	background: #F5F5F5;
+	border-radius: 10px;
+	position: relative;
+	display: inline-block;
+	white-space: nowrap;
+
+	&__bg {
+		background: $orange;
+		border-radius: 10px;
+		position: absolute;
+		transition: all 0.3s;
+	}
+
+	&__button {
+		background: transparent;
+		border: 0 solid;
+		padding: 10px 20px;
+		border-radius: 10px;
+		transition: color 0.3s;
+		cursor: pointer;
+
+		&._active {
+			color: #fff;
+		}
+	}
+}

@@ -28,9 +28,12 @@ html(lang="ru")
 		.page
 			include component/header/header
 			include component/pmenu/pmenu
-			block content
-			include component/footer/footer
 			include component/search/search
+			#smooth-wrapper
+				#smooth-content
+					block content
+					include component/footer/footer
+			
 		block scripts
 			<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 			<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">

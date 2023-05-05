@@ -1,0 +1,213 @@
+.strategy-1 {
+	&__row {
+		display: grid;
+		gap: 80px;
+		align-items: center;
+		grid-template-columns: auto 440px;
+
+		@media(max-width:1200px) {
+			gap: 40px;
+			grid-template-columns: 1fr;
+		}
+	}
+
+	&__right {
+		min-width: 0;
+
+		&:has(.strategy-1-slider._orange) {
+			.strategy-1__link {
+				background: $black !important;
+			}
+		}
+	}
+
+	&__link {
+		background: $orange;
+		padding: 30px;
+		font-family: 'Unbounded';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 16px;
+		line-height: 20px;
+		color: #fff;
+		letter-spacing: -0.02em;
+		display: block;
+		text-decoration: none;
+
+		span {
+			display: block;
+			padding-left: 36px;
+			background-position: left top;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 14.4L7.20833 10.8M11 14.4L14.5 10.8M11 14.4V3M18 10.2V18H4V10.2' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+		}
+
+		&:hover {
+			background: $orangeD;
+
+		}
+	}
+
+	&__title {
+		font-family: 'Unbounded';
+		font-style: normal;
+		font-weight: 300;
+		font-size: 32px;
+		line-height: 150%;
+		color: $orange;
+
+		@media(max-width:1024px) {
+			font-size: 24px;
+			color: $black;
+		}
+	}
+
+
+}
+
+.strategy-1-slider {
+	border: 1px solid $orange;
+	transition: background 0.3s;
+
+	&._orange {
+		background: $orange;
+		color: #fff;
+
+
+	}
+
+	&__title {
+		font-family: 'Unbounded';
+		font-style: normal;
+		font-weight: 700;
+		font-size: 80px;
+		@include lh(80, 99);
+		letter-spacing: -2px;
+
+		@media(max-width:700px) {
+			font-size: 60px;
+		}
+
+		sup {
+			font-size: 62%;
+			position: relative;
+			top: -10px;
+			left: 2px;
+			display: inline-block;
+		}
+
+		small {
+			@include lh(80, 99);
+			font-size: 32px;
+		}
+	}
+
+	.swiper-slide {
+		padding: 48px 30px 77px;
+	}
+
+	&__pagi {
+		position: absolute;
+		left: 30px !important;
+		bottom: 30px !important;
+
+		.swiper-pagination-bullet {
+			.strategy-1-slider._orange & {
+				background-color: #D9D9D9 !important;
+			}
+
+
+
+
+			&.swiper-pagination-bullet-active {
+				background-color: $orange !important;
+
+				.strategy-1-slider._orange & {
+					background-color: #fff !important;
+				}
+			}
+		}
+	}
+}
+
+.strategy-2 {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	gap: 16px;
+
+	@media(max-width:1500px) {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	@media(max-width:1024px) {
+		display: block;
+		columns: 2;
+	}
+
+	@media(max-width:700px) {
+		columns: 1;
+	}
+
+	&__doc {
+		@media(max-width:1024px) {
+			margin-bottom: 16px
+		}
+
+		background: $orange;
+		padding: 30px 20px;
+		border: 1px solid #E26D14;
+		font-size: 16px;
+		line-height: 175%;
+		color: #fff;
+		text-decoration: none;
+		page-break-inside: avoid;
+		break-inside: avoid;
+		display: block;
+
+		&:hover {
+			background: $orangeD;
+		}
+
+		span {
+			display: block;
+			padding-left: 36px;
+			background-position: left top;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml,%3Csvg width='22' height='22' viewBox='0 0 22 22' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11 14.4L7.20833 10.8M11 14.4L14.5 10.8M11 14.4V3M18 10.2V18H4V10.2' stroke='white' stroke-width='2'/%3E%3C/svg%3E%0A");
+		}
+	}
+
+	&__it {
+		@media(max-width:1024px) {
+			margin-bottom: 16px
+		}
+
+		padding: 30px 20px;
+		border: 1px solid #E26D14;
+		font-size: 16px;
+		line-height: 175%;
+		page-break-inside: avoid;
+		break-inside: avoid;
+
+		span {
+			padding-left: 44px;
+			position: relative;
+			display: block;
+
+			&::before {
+				background-image: url("data:image/svg+xml,%3Csvg width='34' height='34' viewBox='0 0 34 34' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M9.06641 16.9997L15.8664 22.6663L24.9331 11.333' stroke='white' stroke-width='3'/%3E%3C/svg%3E%0A");
+				background-position: left top;
+				background-repeat: no-repeat;
+				display: block;
+				content: '';
+				position: absolute;
+				left: 0;
+				top: -3px;
+				width: 34px;
+				height: 34px;
+			}
+		}
+
+		/* or */
+	}
+}

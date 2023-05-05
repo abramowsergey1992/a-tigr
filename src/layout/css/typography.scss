@@ -48,9 +48,10 @@ h3 {
 
 .h4,
 h4 {
-	font-family: 'Manrope';
+	font-family: 'Unbounded';
+	;
 	font-style: normal;
-	font-weight: 500;
+	font-weight: 600;
 	@include clampf(20px, 32px);
 	@include lh(32, 44);
 	letter-spacing: -1px;
@@ -67,6 +68,12 @@ p {
 }
 
 .text {
+
+	h2,
+	.h2 {
+		margin-bottom: 20px;
+	}
+
 	img {
 		margin: 50px 0;
 		object-fit: cover;

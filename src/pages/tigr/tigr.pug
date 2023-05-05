@@ -1,0 +1,142 @@
+extends ../../layout/layout
+block title
+	title Амурский тигр
+block content
+	main(data-barba="container" data-barba-namespace="default").inner.tigr-page
+		+breadcrumb(['Главная'], 'Амурский тигр')._max-1024
+		.block
+			.page-top
+				.page-top__bg
+					+picture('tigr','jpg')
+				.page-top__content 
+					+breadcrumb(['Главная'], 'Амурский тигр')._min-1024
+					h1 Амурский тигр
+					p Самый крупный подвид тигра в мире
+					.page-top__down.down-page
+						<svg  viewBox="0 0 126 126" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path  class="down-page__circle"d="M63 1C28.7583 0.999999 1 28.7583 1 63C0.999999 97.2417 28.7583 125 63 125C97.2417 125 125 97.2417 125 63C125 28.7584 97.2417 1 63 1Z" />
+							<path class="down-page__arrow" d="M72.9201 70.4401L63.0001 80.3601M63.0001 80.3601L53.0801 70.4401M63.0001 80.3601L63.0001 48.1201"  />
+						</svg>
+
+				.page-top__play
+			
+
+		.two-column.block
+			.two-column__left.text 
+				.h4 Ареал этого тигра сосредоточен в охраняемой зоне на юго-востоке России, по берегам рек Амур и Уссури в Амурской области, Хабаровском и Приморском краях.
+			.two-column__right.text
+				p
+					color Более всего амурские тигры распространены в предгорьях Сихотэ-Алинь в Лазовском районе Приморского края, где на сравнительно небольшой территории живёт каждый шестой дикий амурский тигр
+				p Живёт в невысоких горах предпочитая долины рек и широкие долины междхребтами, поросшие лесом с преобладанием кедра и дуба.
+		.tigr.block
+			.tigr__top
+				.tigr__circles-wrap
+					.tigr__circle
+					.tigr__circle
+
+				img(src="img/tigr.svg").tigr__img
+				.tigr__scroll-wrap
+					.tigr__scroll 
+						.tigr__parametrs 
+							.tigr__parametr 
+								p Около
+								p 
+									big 220 см
+								p длина туловища самца
+							.tigr__parametr 
+								p До
+								p 
+									big 180 см
+								p длина туловища самки
+							.tigr__parametr 
+								p 
+									big 95%
+								p популяции Амурского тигра в мире сосредоточено  на территории Приморского и Хабаровского краёв, Амурской области и Еврейской автономной области России
+							.tigr__parametr 
+								p Около
+								p 
+									big 15–20 км
+								p средний ход взрослого тигра-самца
+							.tigr__parametr 
+								p Примерно
+								p 
+									big 20–30 с
+								p и тигр достигает усталости
+							.tigr__parametr 
+								p До
+								p 
+									big 9–10 м
+								p длина прыжка тигра
+							.tigr__parametr 
+								p Примерно
+								p 
+									big 18–20 м/с
+								p пиковая скорость взрослого тигра-самца
+							.tigr__parametr 
+								p Около
+								p 
+									big 100 км
+								p максимальный ход взрослого тигра-самца
+							.tigr__parametr 
+								p До
+								p 
+									big 5 м
+								p высота прыжка тигра
+					
+					.tigr__slider-prev
+						<svg width="34" height="22" viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M11.5609 20.92L1.64085 11M1.64085 11L11.5609 1.07996M1.64085 11L33.8809 11" stroke="white" stroke-width="2"/>
+						</svg>
+					.tigr__slider-next
+						<svg width="34" height="22" viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M22.4391 1.07998L32.3591 11M32.3591 11L22.4391 20.92M32.3591 11L0.11914 11" stroke="white" stroke-width="2"/>
+						</svg>
+
+			.tigr__block 
+				.tigr__orange
+					img(src="img/tigr-logo.svg",alt="#")
+					p 95–120 дней рожает тигрица, как правило, раз в 2,5–3 года. Помёт чаще всего состоит из одного-двух тигрят, иногда из пяти.
+				.tigr__text.text 
+					.tigr__text-column
+						h4 Тигр всеяден
+						p Он может есть всё: от лягушки до медведя. Однако в дикой природе амурские тигры предпочитают питаться копытными животными: благородные и пятнистые олени, кабаны, косули и кабарги.
+					.tigr__text-column
+						h4 Наибольшую активность
+						p Тигры проявляют в вечернее время, в первую половину ночи и рано утром.Днём же они предпочитают лежать где-нибудь на скале или на гребне хребта, откуда открывается хороший обзор.
+		include ../../layout/component/big-slider/big-slider
+		.block.two-cards
+			.two-cards__card
+				.two-cards__card-bg
+					+picture('tc-1','jpg')
+				.two-cards__card-content.text
+					h2 Я научный работник и хочу изучать амурского тигра
+					p Свою деятельность Центр осуществляет без бюджетного финансирования, исключительно благодаря спонсорской поддержке организаций и частных лиц.
+					a(href="#").btn-1 Отправьте меня в тайгу скорее 
+					a(href="#").two-cards__card-link 
+						<svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="28.5" cy="28.5" r="28.5" />
+							<path d="M39.9893 18.4228H17.2295M39.9893 18.4228L17.2295 41.1826M39.9893 18.4228L39.9893 16.5L39.9893 41.1826" stroke-width="4"/>
+						</svg>
+
+
+			.two-cards__card
+				.two-cards__card-bg
+					+picture('tc-2','jpg')
+				.two-cards__card-content.text
+					h2 Уголок творчества
+					p Присылайте нам рисунки, письма, открытки или любое другое творчество о тигре. Лучшие работы мы опубликуем на наших страничках в социальных сетях.
+					a(href="#").btn-1 Отправить 
+					a(href="#").two-cards__card-link 
+						<svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<circle cx="28.5" cy="28.5" r="28.5" />
+							<path d="M39.9893 18.4228H17.2295M39.9893 18.4228L17.2295 41.1826M39.9893 18.4228L39.9893 16.5L39.9893 41.1826" stroke-width="4"/>
+						</svg>
+		.become-friend.block
+			.become-friend__bg
+				+picture('help-2','jpg')
+			.become-friend__content
+				.h2 Стать другом и начать
+					br
+					| помогать тигру
+				a(href="#").btn-1 Стать другом 
+		

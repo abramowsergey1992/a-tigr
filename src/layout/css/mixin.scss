@@ -29,3 +29,24 @@
 	}
 
 }
+
+@mixin Wclampf($min-fs, $max-fs, $min-w: 375px, $max-w: 1440px) {
+
+	$mf: strip-units($max-fs - $min-fs);
+	$mw: strip-units($max-w - $min-w);
+
+
+	& {
+		// font-size: $min-fs;
+
+		// @media (min-width: $min-w) {
+		width: clamp($min-fs, calc(#{$min-fs} + #{$mf} * ((100vw - #{$min-w}) / #{$mw})), $max-fs);
+		// font-size: clamp(64px, calc(64px + (150 - 64)*((100vw - 375px)/(1920 - 375))), 150px);
+		// }
+
+		// @media (min-width: $max-w) {
+		// 	font-size: $max-fs;
+		// }
+	}
+
+}

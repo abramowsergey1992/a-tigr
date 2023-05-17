@@ -34,6 +34,10 @@ body {
 	min-height: 100svh;
 }
 
+.page {
+	overflow: hidden;
+}
+
 body img {
 	max-width: 100%;
 }
@@ -54,6 +58,10 @@ body img {
 	@media(max-width:500px) {
 		padding: 0 12px;
 	}
+}
+
+.pt1 {
+	padding-top: 1px !important;
 }
 
 .overfolow-x {
@@ -195,18 +203,29 @@ color {
 	&__card {
 		overflow: hidden;
 		position: relative;
-		height: calc((100vw - 100px)/2 * 0.9);
-		min-height: 400px;
+		min-height: calc((100vw - 100px)/2 * 0.9);
+
 
 		.btn-1 {
 			margin-top: 20px;
 			background: transparent;
 		}
 
+		--color: #fff;
+
+		color: #fff;
 
 		&._not-hover {
 			--color: #0E0E0E;
-			color: #0E0E0E
+			color: #0E0E0E;
+
+			[layout="white"] & {
+				color: #fff;
+
+				.btn-1 {
+					color: #fff
+				}
+			}
 		}
 	}
 
@@ -294,6 +313,10 @@ color {
 
 			._not-hover & {
 				opacity: 1;
+			}
+
+			[layout="white"] & {
+				background: $orange;
 			}
 
 			background-color: #fff;
@@ -469,6 +492,11 @@ color {
 	grid-template-columns: 1fr 1fr;
 	gap: 20px;
 
+	@media(min-width:700px) {
+		padding-top: 40px;
+		padding-bottom: 40px;
+	}
+
 	@media(max-width:700px) {
 		grid-template-columns: 1fr;
 	}
@@ -484,16 +512,20 @@ color {
 	&__card {
 		&:first-child {
 
+			transform: translateY(-50px);
 
 			@media(max-width:700px) {
+				transform: translateY(0px) !important;
 				padding-top: 0;
 				padding-right: 20%
 			}
 		}
 
 		&:last-child {
+			transform: translateY(50px);
 
 			@media(max-width:700px) {
+				transform: translateY(0px) !important;
 				padding-top: 0;
 				padding-left: 20%
 			}
@@ -512,4 +544,34 @@ color {
 	flex-direction: row;
 	gap: 20px;
 	justify-content: center;
+}
+
+.page {
+	overflow: hidden;
+}
+
+.page-head {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 40px;
+
+	@media(max-width:1200px) {
+		flex-direction: column;
+		align-items: flex-start;
+
+		.overfolow-x {
+			margin-top: 20px;
+		}
+	}
+
+	.h1,
+	h1 {
+		margin-right: auto;
+		margin-bottom: 0;
+	}
+}
+
+._mt-auto {
+	margin-top: auto;
 }

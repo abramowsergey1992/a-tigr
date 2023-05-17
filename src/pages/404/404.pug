@@ -1,0 +1,14 @@
+extends ../../layout/layout-white
+block title
+	title 404
+block content
+	main(data-barba="container" data-barba-namespace="default").inner
+		style footer{display:none}
+		.p404
+			video(src="video/video.mp4" muted playsinline autoplay loop preload="metadata")
+			.p404__pre-title  Ошибка
+			.p404__title 404
+			.p404__after-title Такой стр-р-р-раницы не существует
+			
+			a.btn-1(href="front.html") Больше новостей
+

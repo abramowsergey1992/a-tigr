@@ -24,31 +24,48 @@ block content
 			.page-top-orange
 				img(src="img/tigr-logo.svg",alt="#")
 				p — организация, созданная Русским географическим обществом по инициативе Президента Российской Федерации Владимира Путина. Свою деятельность Центр осуществляет без бюджетного финансирования, исключительно благодаря спонсорской поддержке организаций и частных лиц.
-		.target.block 
+		.target.block(data-aos="fade-up")
 			.target__grid
 				.target__left 
 					h2 Цели
-					.target__prev
-						<svg   viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M11.5609 20.92L1.64085 11M1.64085 11L11.5609 1.07996M1.64085 11L33.8809 11" stroke="white" stroke-width="2"/>
-						</svg>
-					.target__next 
-						<svg  viewBox="0 0 34 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<path d="M22.4391 1.07998L32.3591 11M32.3591 11L22.4391 20.92M32.3591 11L0.11914 11" stroke="white" stroke-width="2"/>
-						</svg>
+					.target__nav
+						.target__prev
+							<svg  viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.21564 13.4953L7.75473 14.0106L8.78535 12.9324L8.24625 12.4171L7.21564 13.4953ZM2 7.47811L1.48469 6.93902L0.920719 7.47811L1.48469 8.0172L2 7.47811ZM8.24625 2.53909L8.78535 2.02378L7.75473 0.9456L7.21564 1.46091L8.24625 2.53909ZM2.51531 8.0172L8.24625 2.53909L7.21564 1.46091L1.48469 6.93902L2.51531 8.0172ZM2 8.22387H20.6256V6.73235H2V8.22387ZM8.24625 12.4171L2.51531 6.93902L1.48469 8.0172L7.21564 13.4953L8.24625 12.4171Z"   />
+							</svg>
+						.target__next 
+							<svg   viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.0043 12.3966L12.4652 12.9119L13.4958 13.9901L14.0349 13.4748L13.0043 12.3966ZM19.2506 7.4576L19.7659 7.99669L20.3299 7.4576L19.7659 6.91851L19.2506 7.4576ZM14.0349 1.4404L13.4958 0.925093L12.4652 2.00328L13.0043 2.51858L14.0349 1.4404ZM19.2506 6.71184H0.625V8.20336H19.2506V6.71184ZM14.0349 13.4748L19.7659 7.99669L18.7353 6.91851L13.0043 12.3966L14.0349 13.4748ZM19.7659 6.91851L14.0349 1.4404L13.0043 2.51858L18.7353 7.99669L19.7659 6.91851Z"   />
+							</svg>
+
 				.target__right
 					.target-slider.swiper 
 						.swiper-wrapper 
 							.swiper-slide
-								.target-slider__title Изучение Амурского тигра
-								img(src="img/a-1.svg", alt="")
+								.target-slider__title.h4 Изучение Амурского тигра
+								div
+									img(src="img/a-1.svg", alt="")
 							.swiper-slide
-								.target-slider__title Сохранени и увеличение популяции
-								img(src="img/a-2.svg", alt="")
+								.target-slider__title.h4 Сохранени и увеличение популяции
+								div
+									img(src="img/a-2.svg", alt="")
 							.swiper-slide
-								.target-slider__title Установление гармоничных отношений
-								img(src="img/a-3.svg", alt="")
-		.block.two-photo
+								.target-slider__title.h4 Установление гармоничных отношений
+								div
+									img(src="img/a-3.svg", alt="")
+							.swiper-slide
+								.target-slider__title.h4 Изучение Амурского тигра
+								div
+									img(src="img/a-1.svg", alt="")
+							.swiper-slide
+								.target-slider__title.h4 Сохранени и увеличение популяции
+								div
+									img(src="img/a-2.svg", alt="")
+							.swiper-slide
+								.target-slider__title.h4 Установление гармоничных отношений
+								div
+									img(src="img/a-3.svg", alt="")
+		.block.two-photo(data-aos="fade-up")
 			.two-photo__card 
 				.two-photo__img 
 					+picture('about-2','jpg') 
@@ -57,7 +74,7 @@ block content
 				.two-photo__img 
 					+picture('about-3','jpg') 
 				.two-photo__title Тигрица в Лазовском заповеднике
-		.block.dark-text 
+		.block.dark-text(data-aos="fade-up") 
 			.dark-text__row
 				.dark-text__left
 					.h4 Наблюдательный совет — это коллегиальный высший орган управления АНО «Центр „Амурский тигр“, который определяет основные направления деятельности Центра.
@@ -65,53 +82,209 @@ block content
 					p 
 						color Члены Наблюдательного совета назначаются Русским географическим обществом (РГО) из числа представителей РГО, представителей органов государственной власти и субъектов РФ, коммерческих и некоммерческих организаций, а также физических лиц.
 					p Наблюдательный совет вносит изменения в устав организации, определяет приоритетные направления деятельности, принципы формирования и использования имущества «Центра „Амурский тигр“», назначает генерального директора и его заместителей, заслушивает отчёты по вопросам деятельности, утверждает финансовый план и назначает аудиторские проверки, а также принимает решение о создании филиалов и открытии представительств.
-		.block.sovet 
+		.block.sovet(data-aos="fade-up") 
 			h2 Состав наблюдетельного совета
 			.sovet__grid 
 				.sovet__left
-				
+					.sovet-head 
+						.sovet-head__photo-wrap
+							+picture('s-1','jpg')
+							.sovet__nav 
+								.sovet__prev
+									<svg  viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M7.21564 13.4953L7.75473 14.0106L8.78535 12.9324L8.24625 12.4171L7.21564 13.4953ZM2 7.47811L1.48469 6.93902L0.920719 7.47811L1.48469 8.0172L2 7.47811ZM8.24625 2.53909L8.78535 2.02378L7.75473 0.9456L7.21564 1.46091L8.24625 2.53909ZM2.51531 8.0172L8.24625 2.53909L7.21564 1.46091L1.48469 6.93902L2.51531 8.0172ZM2 8.22387H20.6256V6.73235H2V8.22387ZM8.24625 12.4171L2.51531 6.93902L1.48469 8.0172L7.21564 13.4953L8.24625 12.4171Z"   />
+									</svg>
+								.sovet__next
+									<svg   viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+										<path d="M13.0043 12.3966L12.4652 12.9119L13.4958 13.9901L14.0349 13.4748L13.0043 12.3966ZM19.2506 7.4576L19.7659 7.99669L20.3299 7.4576L19.7659 6.91851L19.2506 7.4576ZM14.0349 1.4404L13.4958 0.925093L12.4652 2.00328L13.0043 2.51858L14.0349 1.4404ZM19.2506 6.71184H0.625V8.20336H19.2506V6.71184ZM14.0349 13.4748L19.7659 7.99669L18.7353 6.91851L13.0043 12.3966L14.0349 13.4748ZM19.7659 6.91851L14.0349 1.4404L13.0043 2.51858L18.7353 7.99669L19.7659 6.91851Z"   />
+									</svg>
+						.sovet-head__position Председатель
+						.sovet-head__title Чуйченко Константин Анатольевич
+						.sovet-head__desc 
+							p Министр юстиции Российской Федерации
 				.sovet__right
-		.two-column.block
-			.two-column__left.text 
-				.h2._fw-300 Почти 80% российского ареала амурского тигра приходится на охотничьи хозяйства. На этих территориях и хищники, и охотники конкурируют за один и тот же ресурс — копытных животных.
-			.two-column__right.text._gray
-				p
-					color Для того, чтобы конкуренция за копытных животных между тигром и человеком была честной, соблюдались порядок и правила охоты, в ареале тигра работают службы по охране объектов животного мира.
-				p Именно инспекторы Служб находятся на передовой борьбыс браконьерством, угрожающим тигру и его кормовой базе, сталкиваются лицом к лицу с вооружёнными людьми в лесу один на один, без свидетелей.
+					.sovet__title Члены наблюдательного совета
+					.sovet__slider-wrap
+						.sovet__slider.swiper
+							.swiper-wrapper 
+								//- .swiper-slide._predsedatel
+								//- 	.sovet__slider-photo-wrap 
+								//- 		+picture('s-1','jpg ')
+								//- 	.sovet__slider-position  Председатель
+								//- 	.sovet__slider-name Чуйченко Константин Анатольевич
+								//- 	.sovet__slider-desc 
+								//- 		p Начальник Управления Президента РФ по общественным связям и коммуникациям
+								.swiper-slide
+									.sovet__slider-photo-wrap 
+										+picture('s-2','jpg ')
+									.sovet__slider-name Смирнов Александр Юрьевич
+									.sovet__slider-desc 
+										p Начальник Управления Президента РФ по общественным связям и коммуникациям
+								.swiper-slide
+									.sovet__slider-photo-wrap 
+										+picture('s-3','jpg ')
+									.sovet__slider-name Кириенко Анатолий Александрович
+									.sovet__slider-desc 
+										p Заместитель генерального директора АО «Почта России»
+								.swiper-slide
+									.sovet__slider-photo-wrap 
+										+picture('s-4','jpg ')
+									.sovet__slider-name Бесхмельницын Михаил Иванович
+									.sovet__slider-desc 
+										p Начальник Контрольно-аналитической службы Генерального директора – председателя правления ОАО «РЖД»
+								.swiper-slide
+									.sovet__slider-photo-wrap 
+										+picture('s-2','jpg ')
+									.sovet__slider-name Смирнов Александр Юрьевич
+									.sovet__slider-desc 
+										p Начальник Управления Президента РФ по общественным связям и коммуникациям
+								.swiper-slide
+									.sovet__slider-photo-wrap 
+										+picture('s-3','jpg ')
+									.sovet__slider-name Кириенко Анатолий Александрович
+									.sovet__slider-desc 
+										p Заместитель генерального директора АО «Почта России»
+								.swiper-slide
+									.sovet__slider-photo-wrap 
+										+picture('s-4','jpg ')
+									.sovet__slider-name Бесхмельницын Михаил Иванович
+									.sovet__slider-desc 
+										p Начальник Контрольно-аналитической службы Генерального директора – председателя правления ОАО «РЖД»
+			
+		.white-about
+			.white-about__bg
+			.employees.block(data-aos="fade-up")
+				h2 Сотрудники центра
+				.employees__swiper.swiper 
+					.swiper-wrapper
+						.swiper-slide.employee
+							.employee__title Суслов Владимир
+							.employee__desc 
+								p Советник генерального директора — секретарь Наблюдательного совета
+						.swiper-slide.employee
+							.employee__title Балбенкова Татьяна
+							.employee__desc 
+								p Заместитель директора Дальневосточного филиала по общим и правовым вопросам
+						.swiper-slide.employee
+							.employee__title Карманов Роман
+							.employee__desc 
+								p Советник генерального директора
+						.swiper-slide.employee
+							.employee__title Коновалова Евгения
+							.employee__desc 
+								p Старший менеджер проектов, Дальневосточный филиал
+						.swiper-slide.employee
+							.employee__title Балбенкова Татьяна
+							.employee__desc 
+								p Главный бухгалтер
+						.swiper-slide.employee
+							.employee__title Соколова Сергей
+							.employee__desc 
+								p Менеджер научных проектов Дальневосточного филиала
+						.swiper-slide.employee
+							.employee__title Арамилев Сергей
+							.employee__desc 
+								p Генеральный директор Дальневосточного филиала
+						.swiper-slide.employee
+							.employee__title Чернышова Ирина
+							.employee__desc 
+								p Старший юрист-консультант Юридического отдела, Дальневосточный филиал
+						.swiper-slide.employee
+							.employee__title Суслов Владимир
+							.employee__desc 
+								p Советник генерального директора — секретарь Наблюдательного совета
+						.swiper-slide.employee
+							.employee__title Балбенкова Татьяна
+							.employee__desc 
+								p Заместитель директора Дальневосточного филиала по общим и правовым вопросам
+						.swiper-slide.employee
+							.employee__title Карманов Роман
+							.employee__desc 
+								p Советник генерального директора
+						.swiper-slide.employee
+							.employee__title Коновалова Евгения
+							.employee__desc 
+								p Старший менеджер проектов, Дальневосточный филиал
+						.swiper-slide.employee
+							.employee__title Балбенкова Татьяна
+							.employee__desc 
+								p Главный бухгалтер
+						.swiper-slide.employee
+							.employee__title Соколова Сергей
+							.employee__desc 
+								p Менеджер научных проектов Дальневосточного филиала
+						.swiper-slide.employee
+							.employee__title Арамилев Сергей
+							.employee__desc 
+								p Генеральный директор Дальневосточного филиала
+						.swiper-slide.employee
+							.employee__title Чернышова Ирина
+							.employee__desc 
+								p Старший юрист-консультант Юридического отдела, Дальневосточный филиал
+					.employees__nav
+						.employees__prev
+							<svg  viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M7.21564 13.4953L7.75473 14.0106L8.78535 12.9324L8.24625 12.4171L7.21564 13.4953ZM2 7.47811L1.48469 6.93902L0.920719 7.47811L1.48469 8.0172L2 7.47811ZM8.24625 2.53909L8.78535 2.02378L7.75473 0.9456L7.21564 1.46091L8.24625 2.53909ZM2.51531 8.0172L8.24625 2.53909L7.21564 1.46091L1.48469 6.93902L2.51531 8.0172ZM2 8.22387H20.6256V6.73235H2V8.22387ZM8.24625 12.4171L2.51531 6.93902L1.48469 8.0172L7.21564 13.4953L8.24625 12.4171Z" />
+							</svg>
 
 
-		.block.two-cards
-			.two-cards__card
-				.two-cards__card-bg
-					+picture('tc-1','jpg')
-				.two-cards__card-content.text
-					h2 Стратегия сохранения Амурского тигра
-					p Свою деятельность Центр осуществляет без бюджетного финансирования, исключительно благодаря спонсорской поддержке организаций и частных лиц.
-					a(href="#").btn-1 Подробнее
-					a(href="#").two-cards__card-link 
-						<svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="28.5" cy="28.5" r="28.5" />
-							<path d="M39.9893 18.4228H17.2295M39.9893 18.4228L17.2295 41.1826M39.9893 18.4228L39.9893 16.5L39.9893 41.1826" stroke-width="4"/>
-						</svg>
-
-
-			.two-cards__card
-				.two-cards__card-bg
-					+picture('tc-2','jpg')
-				.two-cards__card-content.text
-					h2 Выполнение глобальной программы по сохранению тигра
-					a(href="#").btn-1 Подробнее 
-					a(href="#").two-cards__card-link 
-						<svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
-							<circle cx="28.5" cy="28.5" r="28.5" />
-							<path d="M39.9893 18.4228H17.2295M39.9893 18.4228L17.2295 41.1826M39.9893 18.4228L39.9893 16.5L39.9893 41.1826" stroke-width="4"/>
-						</svg>
-		.block.another-news
-			h2 Другие новости
+						.employees__next
+							<svg   viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M13.0043 12.3966L12.4652 12.9119L13.4958 13.9901L14.0349 13.4748L13.0043 12.3966ZM19.2506 7.4576L19.7659 7.99669L20.3299 7.4576L19.7659 6.91851L19.2506 7.4576ZM14.0349 1.4404L13.4958 0.925093L12.4652 2.00328L13.0043 2.51858L14.0349 1.4404ZM19.2506 6.71184H0.625V8.20336H19.2506V6.71184ZM14.0349 13.4748L19.7659 7.99669L18.7353 6.91851L13.0043 12.3966L14.0349 13.4748ZM19.7659 6.91851L14.0349 1.4404L13.0043 2.51858L18.7353 7.99669L19.7659 6.91851Z"   />
+							</svg>
+			
+		.documentations.block(data-aos="fade-up")
+			h2 Документация
+			.documentations__grid 
+				.documentations__left
+					a(href="#").documentation._orange
+						span Устав центра «Амурский тигр»
+					a(href="#").documentation._orange
+						span Глобальная программа восстановления тигра
+				.documentations__right 
+					.documentations__swiper.swiper 
+						.swiper-wrapper 
+							.swiper-slide 
+								a(href="#").documentation
+									span Отчёт деятельности 2021
+							.swiper-slide 
+								a(href="#").documentation
+									span Отчёт деятельности 2019
+							.swiper-slide 
+								a(href="#").documentation
+									span Отчёт деятельности 2020
+							.swiper-slide 
+								a(href="#").documentation
+									span Отчёт деятельности 2018
+							.swiper-slide 
+								a(href="#").documentation
+									span Отчёт деятельности 2017
+							.swiper-slide 
+								a(href="#").documentation
+									span Отчёт деятельности 2016
+							.swiper-slide 
+								a(href="#").documentation
+									span Отчёт деятельности 2015
+							.swiper-slide 
+								a(href="#").documentation
+									span Отчёт деятельности 2014
+			.documentations__nav
+				.documentations__prev
+					<svg  viewBox="0 0 21 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M7.21564 13.4953L7.75473 14.0106L8.78535 12.9324L8.24625 12.4171L7.21564 13.4953ZM2 7.47811L1.48469 6.93902L0.920719 7.47811L1.48469 8.0172L2 7.47811ZM8.24625 2.53909L8.78535 2.02378L7.75473 0.9456L7.21564 1.46091L8.24625 2.53909ZM2.51531 8.0172L8.24625 2.53909L7.21564 1.46091L1.48469 6.93902L2.51531 8.0172ZM2 8.22387H20.6256V6.73235H2V8.22387ZM8.24625 12.4171L2.51531 6.93902L1.48469 8.0172L7.21564 13.4953L8.24625 12.4171Z"   />
+					</svg>
+				.documentations__next
+					<svg   viewBox="0 0 21 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+						<path d="M13.0043 12.3966L12.4652 12.9119L13.4958 13.9901L14.0349 13.4748L13.0043 12.3966ZM19.2506 7.4576L19.7659 7.99669L20.3299 7.4576L19.7659 6.91851L19.2506 7.4576ZM14.0349 1.4404L13.4958 0.925093L12.4652 2.00328L13.0043 2.51858L14.0349 1.4404ZM19.2506 6.71184H0.625V8.20336H19.2506V6.71184ZM14.0349 13.4748L19.7659 7.99669L18.7353 6.91851L13.0043 12.3966L14.0349 13.4748ZM19.7659 6.91851L14.0349 1.4404L13.0043 2.51858L18.7353 7.99669L19.7659 6.91851Z"   />
+					</svg>
+				
+		.block.another-news(data-aos="fade-up")
+			a.h2(href="news.html").link-arrow Пресс-центр
 			.news-grid
-				+news('Дальневосточный институт университета прокуратуры РФ  и центр «Амурский тигр» подписали соглашение о сотрудничестве','19.01.2023', 'Новости','n-1')
-				+news('Идёт отбор участников в студенческий отряд «Тигр» 2023','17.01.2023', 'Новости','n-2')
+				+news('Дальневосточный институт университета прокуратуры РФ  и центр «Амурский тигр» подписали соглашение о сотрудничестве','19.01.2023', 'Новости','n-1')._big
+				+news('Идёт отбор участников в студенческий отряд «Тигр» 2023','17.01.2023', 'Новости','n-2')._big
 				+news('Амба вернулась в Амурскую область из Китая','11.01.2023', 'Новости','n-3',)
+				+news('Про тигрят из Еврейской автономной области и их мать','10.01.2023', 'Новости','n-4')
+				+news('Новогодние мероприятия  в нацпарке «Бикин»','16.01.2023', 'Новости','n-5')
 			.btns-center 
-				a(href="news.html").btn-1 Больше новостей 
-					 
+				a(href="news.html").btn-1 Больше новостей

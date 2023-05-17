@@ -2,10 +2,13 @@
 	position: fixed;
 	left: 0;
 	top: 0;
-	transition: background 0.3s, filter 0.3s, top 0.3s;
+	transition: opacity 0.3s, background 0.3s, filter 0.3s, top 0.3s;
 	width: 100%;
 	z-index: 100;
 
+	&._header-opacity {
+		opacity: 0;
+	}
 
 	&._header-hidden {
 		top: -110px;

@@ -281,11 +281,7 @@ gulp.task("webp", function () {
 
 // обработка WEBP
 gulp.task("webp-all", function () {
-	return gulp
-		.src(p.src.webp)
-		.pipe(gulp.dest(p.docs.img))
-		.pipe(webp())
-		.pipe(gulp.dest(p.docs.img));
+	return gulp.src(p.src.webp).pipe(webp()).pipe(gulp.dest(p.docs.img));
 });
 
 // обработка svg

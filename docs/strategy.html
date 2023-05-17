@@ -138,7 +138,7 @@
             <source type="image/webp" srcset="img/strategy-1.webp"/><img alt="" src="img/strategy-1.jpg"/>
           </picture>
         </div>
-        <div class="strategy-1 block">
+        <div class="strategy-1 block" data-aos="fade-up">
           <div class="strategy-1__row">
             <div class="strategy-1__left">
               <div class="strategy-1__title">Амурский тигр (Panthera tigris altaica) — самый северный подвид тигра, наиболее крупного и некогда широко распространённого в Азии представителя семейства Кошачьих (Felidae).</div>
@@ -179,7 +179,7 @@
           </div>
         </div>
         <div class="blackzone">
-          <div class="block"> 
+          <div class="block" data-aos="fade-up">
             <div class="h2">Первоочередные меры <br>по сохранению Амурского<br>тигра РФ</div>
             <div class="strategy-2">
               <div class="strategy-2__it"> <span>Развитие международного сотрудничества</span></div>
@@ -192,7 +192,7 @@
               <div class="strategy-2__it"> <span>Просветительская и образовательная деятельность</span></div><a class="strategy-2__doc" href="#"><span>Стратегия сохранения амурского тигра в Российской федерации</span></a>
             </div>
           </div>
-          <div class="block big-slider"> 
+          <div class="block big-slider" data-aos="fade-up"> 
             <div class="swiper big-slider__main"> 
               <div class="swiper-wrapper"> 
                 <div class="swiper-slide">
@@ -376,6 +376,101 @@
                 <li><a class="btn-1" href="/">Как помочь тигру?</a></li>
               </ul>
             </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="feedback-popup">
+        <div class="popup__overlay"> </div>
+        <div class="popup__content inner">
+          <div class="popup__close"> </div>
+          <div class="popup__scroll"> 
+            <h2>Оставить заявку:</h2>
+            <form id="form-feedback" data-error="#error-popup" data-success="#thanks-popup" action="/" method="post">
+              <label class="input"><span class="input__title">ФИО</span>
+                <input placeholder="Иванов Иван Иванович" type="text" data-rule-required>
+              </label>
+              <label class="input"><span class="input__title">Ваш электронный адрес</span>
+                <input class="_mask-email" placeholder="mail@mail.ru" type="text" data-rule-required data-rule-email>
+              </label>
+              <label class="input"><span class="input__title">Телефон</span>
+                <input class="_mask-phone" placeholder="+7 XXX XX XX XX" type="text" data-rule-required>
+              </label>
+              <label class="input"><span class="input__title">Комментарий</span>
+                <textarea name="comment"> </textarea>
+              </label>
+              <div class="_mt-auto"> 
+                <label class="checkbox">
+                  <input type="checkbox" name="agree" data-rule-required>
+                  <div class="checkbox__indicator">
+                     <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 4L4.5 6.5L8.5 1.5" stroke-width="2"></path>
+</svg>
+                  </div>
+                  <div class="checkbox__text">Соглашаюсь с политикой конфиденциальности</div>
+                </label>
+                <button class="btn-1" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="job-popup">
+        <div class="popup__overlay"> </div>
+        <div class="popup__content inner">
+          <div class="popup__close"> </div>
+          <div class="popup__scroll"> 
+            <h2>Отправьте резюме:</h2>
+            <form id="form-job" data-error="#error-popup" data-success="#thanks-popup" action="/" method="post">
+              <label class="input"><span class="input__title">ФИО</span>
+                <input placeholder="Иванов Иван Иванович" type="text" data-rule-required>
+              </label>
+              <label class="input"><span class="input__title">Ваш электронный адрес</span>
+                <input class="_mask-email" placeholder="mail@mail.ru" type="text" data-rule-email data-rule-required>
+              </label>
+              <label class="input"><span class="input__title">Телефон</span>
+                <input class="_mask-phone" placeholder="+7 XXX XX XX XX" type="text" data-rule-required>
+              </label>
+              <label class="input"><span class="input__title">Комментарий</span>
+                <textarea name="comment"></textarea>
+              </label>
+              <div class="file">
+                <div class="file__inpt-wrap"> 
+                  <input class="file__input" multiple="multiple" data-name="file[]" type="file">
+                  <div class="file__placeholder">Прикрепите ваше резюме</div>
+                </div>
+                <div class="file__files"></div>
+              </div>
+              <div class="_mt-auto"> 
+                <label class="checkbox">
+                  <input type="checkbox" name="agree" data-rule-required>
+                  <div class="checkbox__indicator">
+                     <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 4L4.5 6.5L8.5 1.5" stroke-width="2"></path>
+</svg>
+                  </div>
+                  <div class="checkbox__text">Соглашаюсь с политикой конфиденциальности</div>
+                </label>
+                <button class="btn-1" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="thanks-popup">
+        <div class="popup__overlay"> </div>
+        <div class="popup__content inner">
+          <div class="popup__close"> </div>
+          <div class="popup__scroll"> 
+            <h2>Ваша заявка успешно отправлена!</h2>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="error-popup">
+        <div class="popup__overlay"> </div>
+        <div class="popup__content inner">
+          <div class="popup__close"> </div>
+          <div class="popup__scroll"> 
+            <h2>Ваша заявка успешно отправлена!</h2>
           </div>
         </div>
       </div>

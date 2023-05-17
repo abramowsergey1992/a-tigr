@@ -33,19 +33,83 @@ function filters() {
 	$(".filters__button").click(function () {
 		let filter = $(this).data("filter");
 		let wrapper = $(this).closest(".filter-block");
-		wrapper.find(".filters__button").removeClass("_active");
-		$(this).addClass("_active");
-		if (filter == "all") {
-			wrapper.find("[data-filteritem]").removeClass("_d-none");
-		} else {
+		let pagecount = wrapper.data("pagecount");
+		let more = wrapper.find("[data-filtermore]");
+		let i = 0;
+		let c = 0;
+		if (wrapper.data("pagecount")) {
+			wrapper.find(".filters__button").removeClass("_active");
+			$(this).addClass("_active");
+
 			wrapper.find("[data-filteritem]").each(function () {
-				if (filter == $(this).data("filteritem")) {
-					$(this).removeClass("_d-none");
+				console.log(filter);
+				console.log(
+					filter == $(this).data("filteritem") || filter == "all"
+				);
+				if (filter == $(this).data("filteritem") || filter == "all") {
+					c++;
+					if (i < pagecount) {
+						i++;
+						$(this).removeClass("_d-none");
+					} else {
+						$(this).addClass("_d-none");
+					}
 				} else {
 					$(this).addClass("_d-none");
 				}
 			});
+			console.log(i, c);
+			if (c > pagecount) {
+				more.removeClass("_d-none");
+			} else {
+				more.addClass("_d-none");
+			}
+		} else {
+			wrapper.find(".filters__button").removeClass("_active");
+			$(this).addClass("_active");
+			if (filter == "all") {
+				wrapper.find("[data-filteritem]").removeClass("_d-none");
+			} else {
+				wrapper.find("[data-filteritem]").each(function () {
+					if (filter == $(this).data("filteritem")) {
+						$(this).removeClass("_d-none");
+					} else {
+						$(this).addClass("_d-none");
+					}
+				});
+			}
 		}
 		filterBg();
 	});
+	$("[data-filtermore]").click(function () {
+		let wrapper = $(this).closest(".filter-block");
+		let filter = wrapper.find(".filters__button._active").data("filter");
+		let pagecount = wrapper.data("pagecount");
+		let more = wrapper.find("[data-filtermore]");
+		let i = 0;
+		let c = 0;
+
+		wrapper.find("._d-none[data-filteritem]").each(function () {
+			console.log("xx");
+			if (filter == $(this).data("filteritem") || filter == "all") {
+				c++;
+				if (i < pagecount) {
+					i++;
+					$(this).removeClass("_d-none");
+				} else {
+					$(this).addClass("_d-none");
+				}
+			} else {
+				$(this).addClass("_d-none");
+			}
+		});
+		console.log(c, i, pagecount);
+		if (c >= pagecount) {
+			more.removeClass("_d-none");
+		} else {
+			more.addClass("_d-none");
+		}
+	});
+	$(".filters__button._active").first().trigger("click");
+	$(".filters__button._active").first().click();
 }

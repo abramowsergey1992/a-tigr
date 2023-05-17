@@ -25,6 +25,15 @@ mixin sponsor(pretitle, title,desc,img, link="#", filter="")
 			if img == ''
 			else 
 				img(src='img/'+img,alt)
+mixin library(img,  category="",title,link="#")
+	.library(class!=attributes.class,data-filteritem=category)
+		.library__img 
+			if img == ''
+			else 
+				+picture(img,'jpg')
+		.library__category= category
+		a.library__title(href=link)= title
+
 mixin img(name)
 	img(class!=attributes.class, alt="",src="img/"+name)
 

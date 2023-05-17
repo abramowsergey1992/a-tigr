@@ -73,6 +73,7 @@
 	overflow: hidden;
 
 	&._big {
+		max-height: 500px;
 
 		@media(min-width:992px) {
 			grid-column: span 3;

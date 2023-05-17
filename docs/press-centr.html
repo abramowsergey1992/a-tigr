@@ -344,6 +344,101 @@
           </div>
         </div>
       </div>
+      <div class="popup" id="feedback-popup">
+        <div class="popup__overlay"> </div>
+        <div class="popup__content inner">
+          <div class="popup__close"> </div>
+          <div class="popup__scroll"> 
+            <h2>Оставить заявку:</h2>
+            <form id="form-feedback" data-error="#error-popup" data-success="#thanks-popup" action="/" method="post">
+              <label class="input"><span class="input__title">ФИО</span>
+                <input placeholder="Иванов Иван Иванович" type="text" data-rule-required>
+              </label>
+              <label class="input"><span class="input__title">Ваш электронный адрес</span>
+                <input class="_mask-email" placeholder="mail@mail.ru" type="text" data-rule-required data-rule-email>
+              </label>
+              <label class="input"><span class="input__title">Телефон</span>
+                <input class="_mask-phone" placeholder="+7 XXX XX XX XX" type="text" data-rule-required>
+              </label>
+              <label class="input"><span class="input__title">Комментарий</span>
+                <textarea name="comment"> </textarea>
+              </label>
+              <div class="_mt-auto"> 
+                <label class="checkbox">
+                  <input type="checkbox" name="agree" data-rule-required>
+                  <div class="checkbox__indicator">
+                     <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 4L4.5 6.5L8.5 1.5" stroke-width="2"></path>
+</svg>
+                  </div>
+                  <div class="checkbox__text">Соглашаюсь с политикой конфиденциальности</div>
+                </label>
+                <button class="btn-1" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="job-popup">
+        <div class="popup__overlay"> </div>
+        <div class="popup__content inner">
+          <div class="popup__close"> </div>
+          <div class="popup__scroll"> 
+            <h2>Отправьте резюме:</h2>
+            <form id="form-job" data-error="#error-popup" data-success="#thanks-popup" action="/" method="post">
+              <label class="input"><span class="input__title">ФИО</span>
+                <input placeholder="Иванов Иван Иванович" type="text" data-rule-required>
+              </label>
+              <label class="input"><span class="input__title">Ваш электронный адрес</span>
+                <input class="_mask-email" placeholder="mail@mail.ru" type="text" data-rule-email data-rule-required>
+              </label>
+              <label class="input"><span class="input__title">Телефон</span>
+                <input class="_mask-phone" placeholder="+7 XXX XX XX XX" type="text" data-rule-required>
+              </label>
+              <label class="input"><span class="input__title">Комментарий</span>
+                <textarea name="comment"></textarea>
+              </label>
+              <div class="file">
+                <div class="file__inpt-wrap"> 
+                  <input class="file__input" multiple="multiple" data-name="file[]" type="file">
+                  <div class="file__placeholder">Прикрепите ваше резюме</div>
+                </div>
+                <div class="file__files"></div>
+              </div>
+              <div class="_mt-auto"> 
+                <label class="checkbox">
+                  <input type="checkbox" name="agree" data-rule-required>
+                  <div class="checkbox__indicator">
+                     <svg width="10" height="8" viewBox="0 0 10 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1.5 4L4.5 6.5L8.5 1.5" stroke-width="2"></path>
+</svg>
+                  </div>
+                  <div class="checkbox__text">Соглашаюсь с политикой конфиденциальности</div>
+                </label>
+                <button class="btn-1" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="thanks-popup">
+        <div class="popup__overlay"> </div>
+        <div class="popup__content inner">
+          <div class="popup__close"> </div>
+          <div class="popup__scroll"> 
+            <h2>Ваша заявка успешно отправлена!</h2>
+          </div>
+        </div>
+      </div>
+      <div class="popup" id="error-popup">
+        <div class="popup__overlay"> </div>
+        <div class="popup__content inner">
+          <div class="popup__close"> </div>
+          <div class="popup__scroll"> 
+            <h2>Ваша заявка успешно отправлена!</h2>
+          </div>
+        </div>
+      </div>
     </div><script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU" type="text/javascript"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
 </script>

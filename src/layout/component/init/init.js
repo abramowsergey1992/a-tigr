@@ -161,71 +161,74 @@ $(function () {
 		aos();
 		accordion();
 	}
-
-	barba.init({
-		views: [
-			{
-				namespace: "front",
-				beforeEnter() {
-					startPage();
-					front();
-				},
-				afterLeave() {},
-			},
-			{
-				namespace: "contact",
-				beforeEnter() {
-					startPage();
-					contact();
-				},
-				afterLeave() {},
-			},
-			{
-				namespace: "pressCentr",
-				beforeEnter() {
-					startPage();
-					news();
-				},
-				afterLeave() {},
-			},
-			{
-				namespace: "ui",
-				beforeEnter() {
-					startPage();
-				},
-				afterLeave() {},
-			},
-			{
-				namespace: "news-detail",
-				beforeEnter() {
-					startPage();
-				},
-				afterLeave() {},
-			},
-			{
-				namespace: "history",
-				beforeEnter() {
-					startPage();
-				},
-				afterLeave() {},
-			},
-			{
-				namespace: "sponsor",
-				beforeEnter() {
-					startPage();
-				},
-				afterLeave() {},
-			},
-			{
-				namespace: "default",
-				beforeEnter() {
-					startPage();
-				},
-				afterLeave() {},
-			},
-		],
-	});
-	barba.hooks.after(() => {
-		// scroll.update();
-	});
+	startPage();
+	front();
+	contact();
+	news();
+	// barba.init({
+	// 	views: [
+	// 		{
+	// 			namespace: "front",
+	// 			beforeEnter() {
+	// 				startPage();
+	// 				front();
+	// 			},
+	// 			afterLeave() {},
+	// 		},
+	// 		{
+	// 			namespace: "contact",
+	// 			beforeEnter() {
+	// 				startPage();
+	// 				contact();
+	// 			},
+	// 			afterLeave() {},
+	// 		},
+	// 		{
+	// 			namespace: "pressCentr",
+	// 			beforeEnter() {
+	// 				startPage();
+	// 				news();
+	// 			},
+	// 			afterLeave() {},
+	// 		},
+	// 		{
+	// 			namespace: "ui",
+	// 			beforeEnter() {
+	// 				startPage();
+	// 			},
+	// 			afterLeave() {},
+	// 		},
+	// 		{
+	// 			namespace: "news-detail",
+	// 			beforeEnter() {
+	// 				startPage();
+	// 			},
+	// 			afterLeave() {},
+	// 		},
+	// 		{
+	// 			namespace: "history",
+	// 			beforeEnter() {
+	// 				startPage();
+	// 			},
+	// 			afterLeave() {},
+	// 		},
+	// 		{
+	// 			namespace: "sponsor",
+	// 			beforeEnter() {
+	// 				startPage();
+	// 			},
+	// 			afterLeave() {},
+	// 		},
+	// 		{
+	// 			namespace: "default",
+	// 			beforeEnter() {
+	// 				startPage();
+	// 			},
+	// 			afterLeave() {},
+	// 		},
+	// 	],
+	// });
+	// barba.hooks.after(() => {
+	// 	// scroll.update();
+	// });
 });

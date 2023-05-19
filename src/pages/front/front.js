@@ -21,12 +21,23 @@ function front() {
 	// 	)
 	// 	.addTo(controller);
 	new ScrollMagic.Scene({
-		offset: procent(60, smScroll),
-		duration: procent(15, smScroll),
+		offset: procent(50, smScroll),
+		duration: procent(10, smScroll),
 	})
 		.setTween(
 			TweenMax.to(".front-top__text-wrap ", 1, {
 				y: 1,
+				ease: Linear.easeNone,
+			})
+		)
+		.addTo(controller);
+	new ScrollMagic.Scene({
+		offset: procent(50, smScroll),
+		duration: procent(10, smScroll),
+	})
+		.setTween(
+			TweenMax.to(".front-top__down ", 1, {
+				opacity: 0,
 				ease: Linear.easeNone,
 			})
 		)
@@ -85,6 +96,6 @@ function front() {
 	});
 	$(".front-top__down").click(function () {
 		console.log(smScroll);
-		$("html, body").animate({ scrollTop: window.innerHeight * 3 }, 400);
+		$("html, body").animate({ scrollTop: window.innerHeight * 1.3 }, 400);
 	});
 }

@@ -3,13 +3,13 @@ block title
 	title Амурский тигр
 block content
 	main(data-barba="container" data-barba-namespace="default").inner.tigr-page
-		+breadcrumb(['Главная'], 'Амурский тигр')._max-1024
+		
 		.block
 			.page-top
 				.page-top__bg
 					+picture('tigr','jpg')
 				.page-top__content 
-					+breadcrumb(['Главная'], 'Амурский тигр')._min-1024
+					+breadcrumb(['Главная'], 'Амурский тигр')
 					h1 Амурский тигр
 					p Самый крупный подвид тигра в мире
 					.page-top__down.down-page
@@ -107,12 +107,12 @@ block content
 		.block.two-cards
 			.two-cards__card
 				.two-cards__card-bg
-					+picture('tc-1','jpg')
+					+picture('tt-1','jpg')
 				.two-cards__card-content.text
-					h2 Я научный работник и хочу изучать амурского тигра
+					h2 Кто такой тигр?
 					p Свою деятельность Центр осуществляет без бюджетного финансирования, исключительно благодаря спонсорской поддержке организаций и частных лиц.
-					a(href="#").btn-1 Отправьте меня в тайгу скорее 
-					a(href="#").two-cards__card-link 
+					a(href="who.html").btn-1 Подробнее
+					a(href="who.html").two-cards__card-link 
 						<svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="28.5" cy="28.5" r="28.5" />
 							<path d="M39.9893 18.4228H17.2295M39.9893 18.4228L17.2295 41.1826M39.9893 18.4228L39.9893 16.5L39.9893 41.1826" stroke-width="4"/>
@@ -123,10 +123,10 @@ block content
 				.two-cards__card-bg
 					+picture('tc-2','jpg')
 				.two-cards__card-content.text
-					h2 Уголок творчества
-					p Присылайте нам рисунки, письма, открытки или любое другое творчество о тигре. Лучшие работы мы опубликуем на наших страничках в социальных сетях.
-					a(href="#").btn-1 Отправить 
-					a(href="#").two-cards__card-link 
+					h2 Где живёт тигр?
+					p Свою деятельность Центр осуществляет без бюджетного финансирования, исключительно благодаря спонсорской поддержке организаций и частных лиц.
+					a(href="where.html").btn-1 Подробнее 
+					a(href="where.html").two-cards__card-link 
 						<svg width="57" height="57" viewBox="0 0 57 57" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<circle cx="28.5" cy="28.5" r="28.5" />
 							<path d="M39.9893 18.4228H17.2295M39.9893 18.4228L17.2295 41.1826M39.9893 18.4228L39.9893 16.5L39.9893 41.1826" stroke-width="4"/>
@@ -135,8 +135,12 @@ block content
 			.become-friend__bg
 				+picture('help-2','jpg')
 			.become-friend__content
-				.h2 Стать другом и начать
+				.h2 Детям
+
 					br
-					| помогать тигру
-				a(href="#").btn-1 Стать другом 
+					| об Амурском
+					br
+					| тигре
+				p Свою деятельность Центр осуществляет без бюджетного финансирования, исключительно благодаря спонсорской поддержке организаций и частных лиц.
+				button(data-popup="#job-popup",type="button").btn-1 Стать другом 
 		

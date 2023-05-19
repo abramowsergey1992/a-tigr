@@ -81,6 +81,7 @@ $(function () {
 		});
 	}
 	function aos() {
+		let offset = window.innerWidth < 600 ? 60 : 120;
 		AOS.init({
 			// Global settings:
 			disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
@@ -93,7 +94,7 @@ $(function () {
 			throttleDelay: 99, // the delay on throttle used while scrolling the page (advanced)
 
 			// Settings that can be overridden on per-element basis, by `data-aos-*` attributes:
-			offset: 120, // offset (in px) from the original trigger point
+			offset: offset, // offset (in px) from the original trigger point
 			delay: 0, // values from 0 to 3000, with step 50ms
 			duration: 800, // values from 0 to 3000, with step 50ms
 			easing: "ease", // default easing for AOS animations
@@ -111,7 +112,7 @@ $(function () {
 					if (i >= count) {
 						clearInterval(interval);
 					}
-				}, 4);
+				}, 2);
 			}
 		});
 	}

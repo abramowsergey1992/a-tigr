@@ -7,6 +7,7 @@ function who() {
 				pagination: {
 					el: $(this).find(".who-1__pagy")[0],
 					type: "bullets",
+					clickable: true,
 				},
 			});
 		});

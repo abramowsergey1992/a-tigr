@@ -67,17 +67,24 @@ function filters() {
 		} else {
 			wrapper.find(".filters__button").removeClass("_active");
 			$(this).addClass("_active");
-			if (filter == "all") {
-				wrapper.find("[data-filteritem]").removeClass("_d-none");
-			} else {
-				wrapper.find("[data-filteritem]").each(function () {
+			let i = 0;
+
+			wrapper.find("[data-filteritem]").each(function () {
+				if (filter == "all") {
+					$(this).removeClass("_d-none");
+					$(this).attr("visible", i);
+					i++;
+				} else {
 					if (filter == $(this).data("filteritem")) {
 						$(this).removeClass("_d-none");
+						$(this).attr("visible", i);
+						i++;
 					} else {
 						$(this).addClass("_d-none");
+						$(this).removeAttr("visible");
 					}
-				});
-			}
+				}
+			});
 		}
 		filterBg();
 	});

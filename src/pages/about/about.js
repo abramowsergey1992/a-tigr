@@ -80,9 +80,17 @@ function about() {
 				},
 				1024: {
 					slidesPerView: 1,
+					grid: {
+						rows: 2,
+						fill: "row",
+					},
 				},
 				1200: {
 					slidesPerView: 2,
+					grid: {
+						rows: 2,
+						fill: "row",
+					},
 				},
 			},
 			navigation: {

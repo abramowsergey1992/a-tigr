@@ -13,6 +13,11 @@
 		bottom: 39px;
 		z-index: 3;
 
+		@media(max-width:992px) {
+			width: 82px;
+			bottom: 28px;
+		}
+
 		&-circle,
 		&-arrow {
 			stroke: $orange
@@ -118,7 +123,7 @@
 			height: 100%;
 			object-fit: cover;
 
-			[layout="black"] & {
+			[layout="white"] & {
 				mix-blend-mode: color-burn;
 			}
 		}
@@ -639,6 +644,19 @@
 		@media(max-width:700px) {
 			padding: 10px;
 
+			&:not(._d-none) {
+				display: none;
+
+				&[visible="0"],
+				&[visible="1"],
+				&[visible="2"],
+				&[visible="3"],
+				&[visible="4"],
+				&[visible="5"] {
+					display: block;
+				}
+			}
+
 			img {
 				max-height: 35px;
 			}
@@ -681,7 +699,8 @@
 		font-style: normal;
 		font-weight: 700;
 		font-size: 16px;
-		color: #e0e0e0;
+		color: #0E0E0E;
+		;
 		line-height: 24px;
 		padding: 10px 20px;
 		transition: color 0.3s;

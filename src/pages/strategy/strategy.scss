@@ -58,7 +58,7 @@
 
 		@media(max-width:1024px) {
 			font-size: 24px;
-			color: $black;
+
 		}
 	}
 
@@ -110,6 +110,7 @@
 		position: absolute;
 		left: 30px !important;
 		bottom: 30px !important;
+		z-index: 4;
 
 		.swiper-pagination-bullet {
 			.strategy-1-slider._orange & {
@@ -163,6 +164,8 @@
 		page-break-inside: avoid;
 		break-inside: avoid;
 		display: block;
+		font-weight: 500;
+		font-family: 'Unbounded';
 
 		&:hover {
 			background: $orangeD;

@@ -46,6 +46,10 @@
 		margin-right: auto;
 		display: block;
 		margin-top: 40px;
+
+		@media(max-width:700px) {
+			margin-top: 20px;
+		}
 	}
 }
 
@@ -131,6 +135,10 @@
 
 	&__content {
 		padding-bottom: 50px;
+
+		@media(max-width:768px) {
+			padding-bottom: 10px;
+		}
 	}
 
 	&__img {

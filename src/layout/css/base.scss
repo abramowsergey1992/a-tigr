@@ -123,6 +123,18 @@ body img {
 		stroke: #fff
 	}
 
+	@media(max-width:992px) {
+		width: 98px;
+		left: 20px;
+		bottom: 30px;
+	}
+
+	@media(max-width:700px) {
+		width: 82px;
+		left: 14px;
+		bottom: 30px;
+	}
+
 	cursor: pointer;
 
 	&:hover {
@@ -157,6 +169,12 @@ body img {
 	@media(max-width:1024px) {
 		grid-template-columns: 1fr;
 		gap: 0;
+	}
+
+	&__right {
+		color {
+			font-weight: 600;
+		}
 	}
 }
 
@@ -385,9 +403,11 @@ color {
 
 .page-top {
 	position: relative;
-	min-height: calc(100svh - 130px);
+	min-height: calc(100svh - 153px);
 
 	color: #fff;
+
+	&__down {}
 
 	&__bg {
 		position: absolute;
@@ -537,6 +557,22 @@ color {
 		margin-top: 0;
 		max-width: 100%;
 		margin: 0;
+	}
+
+	@media(max-width:700px) {
+		margin-top: 0;
+		max-width: 100%;
+		margin: 0 12px;
+		padding: 30px 20px;
+
+		img {
+			width: 69px;
+			margin-bottom: 50px;
+		}
+
+		.page-top+& {
+			margin-top: -127px;
+		}
 	}
 }
 
@@ -961,4 +997,8 @@ color {
 		content: '';
 		z-index: -1;
 	}
+}
+
+button {
+	font-family: 'Manrope';
 }

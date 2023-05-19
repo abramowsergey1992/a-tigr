@@ -4,6 +4,7 @@ block title
 block content
 	style
 		!=' body{padding-top:0}'
+		!=' .header__toggle-colors{display:flex}'
 	main(data-barba="container" data-barba-namespace="front").inner.front-page
 		#front-top.block
 			.front-top
@@ -13,9 +14,9 @@ block content
 						
 					.front-top__back-mask
 						.front-top__back-b
-							+picture('front-top-b','jpg')
-						.front-top__back-w 
 							+picture('front-top-w','jpg')
+						.front-top__back-w 
+							+picture('front-top-b','jpg')
 				.front-top__text.inner 
 					.front-top__text-wrap
 						h4  — организация, созданная Русским географическим обществом. Свою деятельность Центр осуществляет без бюджетного финансирования, исключительно благодаря спонсорской поддержке организаций и частных лиц.
@@ -122,35 +123,36 @@ block content
 					<path d="M1064.78 431.52C1065.67 437.598 1064.02 443.052 1063.19 448.586C1063.14 448.954 1062.98 449.322 1062.81 449.666C1062.32 450.698 1061.08 450.977 1060.25 450.21C1059.79 449.786 1059.36 449.298 1059 448.778C1055.06 442.996 1052.32 436.758 1051.71 429.689C1051.35 425.618 1050.91 421.556 1050.37 417.517C1050.12 415.63 1049.62 413.759 1049.05 411.943C1047.76 407.809 1046.35 403.706 1044.99 399.588C1044.66 398.604 1044.29 397.612 1045.17 396.725C1045.83 396.061 1046.98 396.309 1048.19 397.428C1051.2 400.195 1053.94 403.226 1056.4 406.497C1057.4 407.825 1058.38 409.168 1059.38 410.48C1062.74 414.886 1064.38 419.916 1064.76 425.379C1064.9 427.538 1064.78 429.713 1064.78 431.512L1064.78 431.52Z" fill="#FAFAFA"/>
 				</svg>
 
-			a.h2(href="news.html").link-arrow Библиотека
+			a.h2(href="library.html").link-arrow Библиотека
 			.front-lib__slider.swiper 
 				.swiper-wrapper 
 					.swiper-slide.front-lib__item
 						.front-lib__item-bg 
 							+picture('l-1','jpg')
-						a(href="#").front-lib__item-title.h4._white Для всех
+						a(href="library.html").front-lib__item-title.h4._white Для всех
 						.front-lib__item-count 01
 					.swiper-slide.front-lib__item
 						.front-lib__item-bg 
-						a(href="#").front-lib__item-title.h4 Специалистам
+						a(href="library.html").front-lib__item-title.h4 Специалистам
 						.front-lib__item-count 02
 					.swiper-slide.front-lib__item
 						.front-lib__item-bg 
 							+picture('l-2','jpg')
-						a(href="#").front-lib__item-title.h4._white Детям
+						a(href="library.html").front-lib__item-title.h4._white Детям
 						.front-lib__item-count 03
 					.swiper-slide.front-lib__item
 						.front-lib__item-bg 
 							+picture('l-3','jpg')
-						a(href="#").front-lib__item-title.h4 Отчёты
+						a(href="library.html").front-lib__item-title.h4 Отчёты
+						.front-lib__item-count 04
 		.front-sponsors 
 			a.h2(href="news.html").link-arrow.front-sponsors__title Наши спонсоры
 			.front-sponsors__grid.filter-block
 				.front-sponsors__filters
-					button.front-sponsors__filter._active(type='button',data-filter="all") Все спонсоры
-					button.front-sponsors__filter(type='button',data-filter="Генеральные") Генеральные
-					button.front-sponsors__filter(type='button',data-filter="Официальные") Официальные
-					button.front-sponsors__filter(type='button',data-filter="Специальные") Специальные
+					button.filters__button.front-sponsors__filter._active(type='button',data-filter="all") Все спонсоры
+					button.filters__button.front-sponsors__filter(type='button',data-filter="Генеральные") Генеральные
+					button.filters__button.front-sponsors__filter(type='button',data-filter="Официальные") Официальные
+					button.filters__button.front-sponsors__filter(type='button',data-filter="Специальные") Специальные
 				.front-sponsors__right 
 					
 					.front-sponsors__sponsors

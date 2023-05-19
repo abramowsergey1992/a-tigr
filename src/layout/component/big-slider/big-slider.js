@@ -5,6 +5,7 @@ function bigSlider() {
 			loop: true,
 			watchSlidesProgress: true,
 			spaceBetween: 14,
+			freeMode: true,
 			breakpoints: {
 				320: {
 					slidesPerView: 2.1,
@@ -26,7 +27,6 @@ function bigSlider() {
 		big = new Swiper($(this).find(".big-slider__main")[0], {
 			speed: 400,
 			loop: true,
-
 			spaceBetween: 10,
 			thumbs: {
 				swiper: thumb,

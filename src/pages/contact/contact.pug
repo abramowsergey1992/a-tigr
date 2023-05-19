@@ -11,9 +11,9 @@ block content
 					ul
 						li.contact__toggle-bg
 						li
-							button(type="button",data-slide="0",data-coord="55.766947,37.642069")._active Москва
+							button(type="button",data-slide="0")._active Москва
 						li
-							button(type="button",data-slide="1",data-coord="43.113298,131.89259") Владивосток
+							button(type="button",data-slide="1") Владивосток
 					
 				.swiper.contact__slider
 					.swiper-wrapper
@@ -51,4 +51,6 @@ block content
 									a(href="mailto:a.shorshin@amur-tiger.ru") a.shorshin@amur-tiger.ru
 							.contact__history 
 								a.btn-1(href="history-vladivostok.html") История здания филиала 
-				#contact-map(data-marker="img/marker.svg")
+				.contact-map-wrapper
+					.contact-map#contact-map1._open(data-marker="img/marker.svg", data-coord="55.766947,37.642069")
+					.contact-map#contact-map2(data-marker="img/marker.svg",data-coord="43.113298,131.89259")

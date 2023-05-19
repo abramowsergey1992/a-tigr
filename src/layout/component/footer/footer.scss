@@ -1,6 +1,11 @@
 .footer {
 	margin-top: auto;
 
+	.blackzone & {
+		.inner {
+			padding: 0;
+		}
+	}
 
 	&__top {
 
@@ -14,6 +19,10 @@
 			padding-top: 41px;
 			gap: 50px;
 			grid-template-columns: 1fr;
+		}
+
+		.blackzone & {
+			border-top: 1px solid #272727 !important;
 		}
 
 		body[layout="white"] & {
@@ -49,6 +58,10 @@
 
 			@media(max-width:992px) {
 				height: 29px;
+			}
+
+			@media(max-width:700px) {
+				height: 38px;
 			}
 
 			path[stroke] {
@@ -134,6 +147,10 @@
 
 		body[layout="white"] & {
 			border-top: 1px solid #D1D1D1;
+		}
+
+		.blackzone & {
+			border-top: 1px solid #272727 !important;
 		}
 
 		@media(max-width:750px) {

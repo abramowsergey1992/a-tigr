@@ -112,6 +112,69 @@
 		display: none !important;
 	}
 
+	&__prev,
+	&__next {
+		width: 124px;
+		position: absolute;
+		height: 124px;
+		// backdrop-filter: blur(5px);
+		border-radius: 50%;
+		// background: rgba($color: #fff, $alpha: 0.04);
+		border: 1px solid $black;
+		z-index: 2;
+		transition: opacity 0.3s;
+		cursor: pointer;
+
+		@media(max-width:600px) {
+			display: none !important;
+		}
+
+		@media(max-width:992px) {
+			width: 60px;
+			height: 60px;
+
+			svg {
+				width: 15px;
+			}
+		}
+
+		&.swiper-button-disabled {
+			opacity: 0;
+		}
+
+		&:hover {
+			background: $orange;
+			border-color: $orange;
+
+			path {
+				fill: #fff !important
+			}
+		}
+
+		svg {
+			width: 32px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transform: translateX(-50%) translateY(-50%);
+		}
+
+		path {
+			fill: $black;
+
+		}
+	}
+
+	&__prev {
+		left: -10px;
+		bottom: 0;
+	}
+
+	&__next {
+		top: -50px;
+		right: 0;
+	}
+
 	.swiper-wrapper {
 		padding-top: 86px;
 	}

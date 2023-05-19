@@ -6,6 +6,44 @@ $(function () {
 	// 	effects: true, // looks for data-speed and data-lag attributes on elements
 	// 	smoothTouch: 0.1, // much shorter smoothing time on touch devices (default is NO smoothing on touch devices)
 	// });
+	function accordion() {
+		$(".accordion__head").click(function () {
+			if ($(this).closest(".accordion").hasClass("_open")) {
+				$(this)
+					.closest(".accordions")
+					.find(".accordion")
+					.removeClass("_open");
+				$(this)
+					.closest(".accordions")
+					.find(".accordion__content")
+					.stop()
+					.slideUp();
+			} else {
+				$(this)
+					.closest(".accordions")
+					.find(".accordion")
+					.removeClass("_open");
+				$(this)
+					.closest(".accordions")
+					.find(".accordion__content")
+					.stop()
+					.slideUp();
+				$(this)
+					.closest(".accordion")
+					.find(".accordion__content")
+					.stop()
+					.slideDown();
+				$(this).closest(".accordion").addClass("_open");
+			}
+		});
+	}
+	function video() {
+		$(".video__play-wrap ").click(function () {
+			let video = $(this).closest(".video").find("video")[0];
+			$(this).fadeOut();
+			video.play();
+		});
+	}
 	function parallax() {
 		let controller = new ScrollMagic.Controller({
 			refreshInterval: 0,
@@ -107,6 +145,10 @@ $(function () {
 		scroll();
 		form();
 		twoCard();
+		who();
+		global();
+		video();
+		aResidents();
 		tigr();
 		about();
 		library();
@@ -116,6 +158,7 @@ $(function () {
 		downPage();
 		strategy();
 		aos();
+		accordion();
 	}
 
 	barba.init({

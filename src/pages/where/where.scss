@@ -1,0 +1,82 @@
+.where-numbers {
+	&__grid {
+		padding-bottom: 50px;
+		grid-template-columns: auto auto;
+		gap: 80px;
+		display: grid;
+		align-items: end;
+
+		@media(max-width:700px) {
+			grid-template-columns: 1fr;
+			gap: 40px
+		}
+	}
+}
+
+.where-number {
+	position: relative;
+
+	&__number {
+		font-family: 'Unbounded';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 90px;
+		line-height: 112px;
+		letter-spacing: -2px;
+
+		@media(max-width:980px) {
+			font-size: 48px;
+			line-height: 60px;
+		}
+
+		&._big {
+			font-family: 'Unbounded';
+			font-style: normal;
+			font-weight: 400;
+			font-size: 271px;
+			line-height: 251px;
+			/* identical to box height, or 113% */
+
+			letter-spacing: -15px;
+
+			@media(max-width:1300px) {
+				font-size: 200px;
+				line-height: 200px;
+				letter-spacing: -10px;
+			}
+
+			@media(max-width:980px) {
+				font-size: 92px;
+				letter-spacing: -5px;
+				line-height: 92px;
+			}
+		}
+
+		&._orange {
+			color: $orange;
+		}
+	}
+
+	&__desc {
+		margin-top: 15px;
+		font-family: 'Unbounded';
+		font-style: normal;
+		font-weight: 500;
+		font-size: 20px;
+		line-height: 28px;
+		position: absolute;
+		left: 0;
+		top: calc(100%);
+
+		@media(max-width:980px) {
+			font-size: 14px;
+			line-height: 17px;
+		}
+
+		@media(max-width:700px) {
+			position: relative;
+			top: 0;
+			margin-top: 7px;
+		}
+	}
+}

@@ -221,6 +221,10 @@ body img {
 	--color: #0E0E0E;
 	color: var(--color);
 
+	@media(max-width:992px) {
+		padding-top: 60px;
+	}
+
 	&::before {
 		position: absolute;
 		left: 50%;

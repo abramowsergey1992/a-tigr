@@ -231,6 +231,12 @@
 
 .sovet {
 
+	&__left {
+		@media(max-width:700px) {
+			display: none !important;
+		}
+	}
+
 	&__grid {
 		display: grid;
 		gap: 17px;
@@ -247,6 +253,22 @@
 
 	}
 
+	&__slider-photo-wrap {
+		position: relative;
+
+		.sovet__nav {
+			@media(min-width:700px) {
+				display: none !important;
+			}
+		}
+	}
+
+	.swiper-slide._predsedatel {
+		@media(min-width:700px) {
+			display: none !important;
+		}
+	}
+
 	&__title {
 		font-family: 'Unbounded';
 		font-style: normal;
@@ -258,8 +280,21 @@
 		letter-spacing: -0.02em;
 
 		@media(max-width:700px) {
-			color: #0E0E0E;
+
+			display: none;
 		}
+	}
+
+	&__slider-position {
+		margin-top: 30px;
+		color: $orange;
+		margin-bottom: 13px;
+		font-family: 'Unbounded';
+		font-style: normal;
+		font-weight: 500;
+		letter-spacing: -0.02em;
+		font-size: 16px;
+		line-height: 20px;
 	}
 
 	.swiper-slide {
@@ -268,6 +303,11 @@
 
 		@media(max-width:1050px) {
 			max-width: 208px;
+		}
+
+		@media(max-width:700px) {
+			max-width: 400px;
+			width: calc(100% - 14px);
 		}
 	}
 
@@ -291,6 +331,11 @@
 		font-size: 16px;
 		line-height: 20px;
 		letter-spacing: -0.02em;
+
+		@media(max-width:700px) {
+			font-size: 24px;
+			line-height: 30px;
+		}
 	}
 
 	&__slider-wrap {
@@ -633,7 +678,7 @@
 		}
 
 		@media(max-width:700px) {
-			top: -869.594px !important;
+			top: -437px !important;
 			height: 131vh !important;
 			background-repeat: no-repeat !important;
 		}

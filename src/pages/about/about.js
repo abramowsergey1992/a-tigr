@@ -22,6 +22,12 @@ function about() {
 				prevEl: $(".sovet__prev")[0],
 			},
 		});
+		$(".swiper-slide .sovet__next").click(function () {
+			sovet.slideNext();
+		});
+		$(".swiper-slide .sovet__prev").click(function () {
+			sovet.slidePrev();
+		});
 	}
 	if ($(".employees__swiper").length) {
 		const employees = new Swiper(".employees__swiper", {

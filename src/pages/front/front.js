@@ -1,5 +1,5 @@
 function front() {
-	let smScroll = window.innerHeight * 2;
+	let smScroll = window.innerHeight * 3;
 	function procent(number1, number2) {
 		return (number2 / 100) * number1;
 	}

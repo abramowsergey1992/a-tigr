@@ -393,6 +393,23 @@ color {
 }
 
 .one-img {
+	&__scroll {
+		@media(max-width:992px) {
+			overflow: auto;
+
+			&::-webkit-scrollbar {
+				display: none;
+			}
+
+			img {
+				height: 400px;
+				max-width: initial;
+				width: initial;
+				min-width: 100%s;
+			}
+		}
+	}
+
 	img {
 		width: 100%;
 		object-fit: cover;
@@ -851,9 +868,12 @@ color {
 			display: block;
 			position: absolute;
 
-			.blackzone &,
+			.blackzone & {
+				background: $orange !important;
+			}
+
 			[layout="black"] & {
-				background: $orange;
+				background: $orange !;
 			}
 
 			[layout="white"] & {

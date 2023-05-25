@@ -49,7 +49,7 @@ mixin breadcrumb(items, last)
 		ul.breadcrumb__list
 			each item in items
 				li.breadcrumb__item
-					a(href="#" title=item).breadcrumb__link= item
+					a(href="/" title=item).breadcrumb__link= item
 
 			if last
 				li.breadcrumb__item

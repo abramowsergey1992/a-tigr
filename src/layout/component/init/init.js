@@ -141,6 +141,22 @@ $(function () {
 	search();
 	pmenu();
 	function startPage() {
+		if ($(".page-top__bg video").length) {
+			var vid = document.querySelector(".page-top__bg video");
+			vid.onended = function () {
+				$(".page-top__play").fadeIn();
+			};
+			$(".page-top__play").click(function () {
+				$(this).fadeOut();
+				$(this)
+					.closest(".page-top")
+					.find(".page-top__bg video")[0]
+					.play();
+				$(this)
+					.closest(".page-top")
+					.find(".page-top__bg video")[0].currentTime = 0;
+			});
+		}
 		parallax();
 		// scroller.effects(".block", { lag: 1, speed: 1 });
 		scroll();

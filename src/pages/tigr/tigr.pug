@@ -8,6 +8,7 @@ block content
 			.page-top
 				.page-top__bg
 					+picture('tigr','jpg')
+					video(src="video/placeholder.mp4#t=0.001"  preload="metadata" playsinline)
 				.page-top__content 
 					+breadcrumb(['Главная'], 'Амурский тигр')
 					h1 Амурский тигр
@@ -19,7 +20,7 @@ block content
 						</svg>
 
 				.page-top__play
-			
+					
 
 		.two-column.block
 			.two-column__left.text 
@@ -142,5 +143,5 @@ block content
 					br
 					| тигре
 				p Свою деятельность Центр осуществляет без бюджетного финансирования, исключительно благодаря спонсорской поддержке организаций и частных лиц.
-				button(data-popup="#job-popup",type="button").btn-1 Стать другом 
+				a(href="who.html").btn-1 Стать другом 
 		

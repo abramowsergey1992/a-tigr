@@ -434,6 +434,37 @@ color {
 
 	&__down {}
 
+	&__play {
+		width: 57px;
+		height: 57px;
+		background: #fff;
+		border-radius: 50%;
+		right: 50px;
+		bottom: 50px;
+		position: absolute;
+		cursor: pointer;
+
+		&:hover::after {
+			transform: scale(1.3);
+		}
+
+		&::after {
+			display: block;
+			content: '';
+			width: 10px;
+			height: 12px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			transition: transform 0.3s;
+			margin-top: -6px;
+			margin-left: -5px;
+			background-position: center;
+			background-repeat: no-repeat;
+			background-image: url("data:image/svg+xml,%3Csvg width='9' height='11' viewBox='0 0 9 11' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1.49614 0.144933C1.18664 -0.0496122 0.806388 -0.0482153 0.498073 0.148599C0.189758 0.345413 0 0.707883 0 1.1V9.9C0 10.2921 0.189758 10.6546 0.498073 10.8514C0.806388 11.0482 1.18664 11.0496 1.49614 10.8551L8.49614 6.45507C8.80771 6.25922 9 5.89474 9 5.5C9 5.10526 8.80771 4.74078 8.49614 4.54493L1.49614 0.144933Z' fill='%23E26D14'/%3E%3C/svg%3E%0A");
+		}
+	}
+
 	&__bg {
 		position: absolute;
 		left: 0;
@@ -441,6 +472,11 @@ color {
 		width: 100%;
 		height: 100%;
 
+		video {
+			z-index: 4;
+		}
+
+		video,
 		img {
 			position: absolute;
 			left: 0;
@@ -873,7 +909,7 @@ color {
 			}
 
 			[layout="black"] & {
-				background: $orange !;
+				background: $orange ;
 			}
 
 			[layout="white"] & {

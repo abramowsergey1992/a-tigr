@@ -2,7 +2,7 @@
 <html lang="ru">
   <head>
     <meta charset="utf-8">
-    <title>Амурский тигр</title>
+    <title>Спонсоры</title>
     <meta content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
     <meta content="ie=edge" http-equiv="x-ua-compatible"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;700;800&family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/base.min.css">
@@ -125,19 +125,51 @@
           </ul>
         </div>
       </div>
-      <main class="inner" data-barba="container" data-barba-namespace="ui">
-        <div class="text">
-          <div class="big-title"> bold 128 ptx</div>
-          <h1>h1 Unbounded light 82pt</h1>
-          <h2>h2 Unbounded Semibold 48 pt</h2>
-          <h3>h3 Unbounded Light 32/48</h3>
-          <h4>h4 Unbounded Medium 24/32</h4>
-          <p> <b>Manrope Semibold 16/28</b></p>
-          <p>Manrope Light 16/28</p>
-          <label class="input"><span class="input__title">ФИО</span>
-            <input placeholder="Иванов Иван Иванович" type="text">
-          </label>
-          <div class="btn-1">Больше новостей</div>
+      <main class="inner sponsor-page" data-barba="container" data-barba-namespace="sponsor">
+        <div class="breadcrumb">
+          <ul class="breadcrumb__list">
+            <li class="breadcrumb__item"><a class="breadcrumb__link" href="/" title="Главная">Главная</a></li>
+            <li class="breadcrumb__item"><span class="breadcrumb__link-current">Партнёры</span></li>
+          </ul>
+        </div>
+        <h1>Партнёры</h1>
+        <div class="filter-block block">
+          <div class="overfolow-x">
+            <div class="sponsor-page__filters filters">
+              <div class="filters__bg"></div>
+              <button class="sponsor-page__filter filters__button _active" type="button" data-filter="all">Все</button>
+              <button class="sponsor-page__filter filters__button" type="button" data-filter="Учредитель">Учредитель</button>
+              <button class="sponsor-page__filter filters__button" type="button" data-filter="Государство">Государство</button>
+              <button class="sponsor-page__filter filters__button" type="button" data-filter="ООПТ">ООПТ</button>
+              <button class="sponsor-page__filter filters__button" type="button" data-filter="НКО">НКО</button>
+              <button class="sponsor-page__filter filters__button" type="button" data-filter="Образование">Образование</button>
+              <button class="sponsor-page__filter filters__button" type="button" data-filter="Бизнес">Бизнес</button>
+              <button class="sponsor-page__filter filters__button" type="button" data-filter="Информация">Информация</button>
+            </div>
+          </div>
+          <div class="sponsor-page__grid sponsor-grid">
+            <div class="sponsor" data-filteritem="Учредитель">
+              <div class="sponsor__pretitle">Учредитель</div>
+              <div class="sponsor__title">АО «Россельхозбанк»</div>
+              <div class="sponsor__desc">
+                <p>Один из крупнейших банков в России. Универсальный коммерческий банк, предоставляющий все виды банковских услуг и занимающий лидирующие позиции в финансировании агропромышленного комплекса России.</p>
+              </div><a class="sponsor__link" href="#"><img src="img/s-1.svg" alt="alt"/></a>
+            </div>
+            <div class="sponsor" data-filteritem="Учредитель">
+              <div class="sponsor__pretitle">Учредитель</div>
+              <div class="sponsor__title">Банк ВТБ</div>
+              <div class="sponsor__desc">
+                <p>Российский коммерческий банк с государственным участием. Второй по величине активов банк России и первый по размеру уставного капитала.</p>
+              </div><a class="sponsor__link" href="#"><img src="img/s-2.svg" alt="alt"/></a>
+            </div>
+            <div class="sponsor" data-filteritem="Государство">
+              <div class="sponsor__pretitle">Государство</div>
+              <div class="sponsor__title">ПАО «Газпром»</div>
+              <div class="sponsor__desc">
+                <p>Глобальная энергетическая компания. Основные направления деятельности — разведка, добыча, транспортировка, хранение, переработка и реализация газа и нефти, производство и сбыт тепло — и электроэнергии.</p>
+              </div><a class="sponsor__link" href="#"><img src="img/s-3.svg" alt="alt"/></a>
+            </div>
+          </div>
         </div>
       </main>
       <footer class="footer" data-scroll-section>

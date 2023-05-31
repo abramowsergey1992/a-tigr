@@ -1,0 +1,27 @@
+extends ../../layout/layout-white
+block title
+	title Спонсоры
+block content
+	main(data-barba="container" data-barba-namespace="sponsor").inner.sponsor-page
+		+breadcrumb(['Главная'], 'Партнёры')
+		h1 Партнёры
+		.filter-block.block
+			
+			.overfolow-x
+				.sponsor-page__filters.filters
+					.filters__bg
+					button.sponsor-page__filter.filters__button._active(type="button",data-filter="all") Все
+					button.sponsor-page__filter.filters__button(type="button",data-filter="Учредитель") Учредитель
+					button.sponsor-page__filter.filters__button(type="button",data-filter="Государство") Государство
+					button.sponsor-page__filter.filters__button(type="button",data-filter="ООПТ") ООПТ
+					button.sponsor-page__filter.filters__button(type="button",data-filter="НКО") НКО
+					button.sponsor-page__filter.filters__button(type="button",data-filter="Образование") Образование
+					button.sponsor-page__filter.filters__button(type="button",data-filter="Бизнес") Бизнес
+					button.sponsor-page__filter.filters__button(type="button",data-filter="Информация") Информация
+
+
+			.sponsor-page__grid.sponsor-grid
+				+sponsor('Учредитель','АО «Россельхозбанк»','Один из крупнейших банков в России. Универсальный коммерческий банк, предоставляющий все виды банковских услуг и занимающий лидирующие позиции в финансировании агропромышленного комплекса России.','s-1.svg')
+				+sponsor('Учредитель','Банк ВТБ','Российский коммерческий банк с государственным участием. Второй по величине активов банк России и первый по размеру уставного капитала.','s-2.svg')
+				+sponsor('Государство','ПАО «Газпром»','Глобальная энергетическая компания. Основные направления деятельности — разведка, добыча, транспортировка, хранение, переработка и реализация газа и нефти, производство и сбыт тепло — и электроэнергии.','s-3.svg')
+				

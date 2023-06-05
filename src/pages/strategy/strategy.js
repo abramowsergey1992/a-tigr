@@ -4,6 +4,9 @@ function strategy() {
 
 		swiper = new Swiper(this, {
 			spaceBetween: 10,
+			autoplay: {
+				delay: 5000,
+			},
 			pagination: {
 				clickable: true,
 				el: th.find(".strategy-1-slider__pagi")[0],

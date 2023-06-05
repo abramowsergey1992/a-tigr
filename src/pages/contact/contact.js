@@ -12,7 +12,6 @@ function contact() {
 						parseFloat(center[1].trim()),
 					],
 					controls: ["zoomControl"],
-					behaviors: ["ScrollZoom"],
 					zoom: 16,
 				},
 				{
@@ -20,6 +19,17 @@ function contact() {
 				}
 			);
 
+			myMap.behaviors.disable("scrollZoom");
+
+			//на мобильных устройствах... (проверяем по userAgent браузера)
+			if (
+				/Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+					navigator.userAgent
+				)
+			) {
+				//... отключаем перетаскивание карты
+				myMap.behaviors.disable("drag");
+			}
 			myPlacemark = new ymaps.Placemark(
 				[parseFloat(center[0].trim()), parseFloat(center[1].trim())],
 				{

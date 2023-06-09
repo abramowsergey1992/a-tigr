@@ -96,6 +96,6 @@ function front() {
 	});
 	$(".front-top__down").click(function () {
 		console.log(smScroll);
-		$("html, body").animate({ scrollTop: window.innerHeight * 1.3 }, 400);
+		$("html, body").animate({ scrollTop: window.innerHeight * 2.3 }, 400);
 	});
 }

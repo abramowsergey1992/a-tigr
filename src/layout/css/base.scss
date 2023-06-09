@@ -415,9 +415,9 @@ color {
 
 			img {
 
-				max-width: initial;
-				width: initial;
-				min-width: 100%;
+				max-width: initial !important;
+				width: initial !important;
+				min-width: 100% !important;
 			}
 		}
 	}

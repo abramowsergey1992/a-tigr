@@ -1,0 +1,14 @@
+extends ../../layout/layout-white
+block title
+	title Амурский тигр
+block content
+	main(data-barba="container" data-barba-namespace="default").inner
+		+breadcrumb(['Главная'], 'Поиск')
+		.text.search-page
+			h2 По вашему поисковому запросу найдено:
+			ul.search-result
+				li
+					a(href="#").h4 Программа компенсации ущерба
+				li
+					a(href="#").h4 Рекомендации по поведению в местах обитания тигра
+			

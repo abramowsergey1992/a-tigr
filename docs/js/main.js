@@ -429,6 +429,9 @@ function news() {
 }
 
 $(function(){})
+$(function(){})
+$(function(){})
+$(function(){})
 function strategy() {
 	$(".strategy-1-slider").each(function () {
 		let th = $(this);
@@ -519,7 +522,6 @@ function tigr() {
 	}
 }
 
-$(function(){})
 $(function(){})
 $(function(){})
 function who() {

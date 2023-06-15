@@ -1,0 +1,19 @@
+extends ../../layout/layout-white
+block title
+	title Амурский тигр
+block content
+	main(data-barba="container" data-barba-namespace="default").inner
+		+breadcrumb(['Главная'], 'Поиск')
+		.text.search-page
+			h2 Увы, по вашему запросу ничего не найдено
+			.search-puplar
+				p Популярные запросы:
+				ul 
+					li
+						a(href="/").btn-1 Кто такой тигр?
+					li
+						a(href="/").btn-1 Наказание за убийство тигра
+					li
+						a(href="/").btn-1 Сохранение Амурского тигра
+					li
+						a(href="/").btn-1 Как помочь тигру?

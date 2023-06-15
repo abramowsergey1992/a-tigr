@@ -1,0 +1,34 @@
+.search-puplar {
+	margin-top: auto;
+
+	p {
+
+		margin-bottom: 10px;
+	}
+
+	ul {
+		display: flex;
+		flex-direction: row;
+		gap: 10px;
+		flex-wrap: wrap;
+	}
+
+	.btn-1 {
+		background: transparent;
+
+		.btn-1__overflow {
+			span {
+				font-size: 14px;
+				line-height: 17px;
+				letter-spacing: -0.01em;
+
+			}
+		}
+	}
+}
+
+.search-puplar {
+	li {
+		a {}
+	}
+}

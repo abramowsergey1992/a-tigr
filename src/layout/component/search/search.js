@@ -9,6 +9,7 @@ function search() {
 		$(".search-box").fadeIn();
 		setTimeout(function () {}, 100);
 	});
+
 	$("#search-input").autocomplete({
 		serviceUrl: $("#search-input").data("url"),
 		noSuggestionNotice: "Нет результатов ",
@@ -21,13 +22,15 @@ function search() {
 			return re.test(suggestion.value);
 		},
 		onSelect: function (suggestion) {
-			alert("You selected: " + suggestion.value + ", " + suggestion.data);
+			setTimeout(() => {
+				$("#search-popup-form").submit();
+			}, 100);
 		},
 		onHint: function (hint) {
 			$("#search-input-x").val(hint);
 		},
 		onInvalidateSelection: function () {
-			$$("#search-input-x").val("");
+			$("#search-input-x").val("");
 		},
 	});
 }

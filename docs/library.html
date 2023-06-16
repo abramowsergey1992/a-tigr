@@ -576,12 +576,15 @@
           <div class="search-box__wrap">
             <button class="search-box__close" type="button"></button>
             <div class="search-box__wrapper"> 
-              <div class="search-box__input-wrap"> 
+              <form class="search-box__input-wrap" id="search-popup-form" action="/" method="post"> 
                 <input class="search-box__input" type="text" data-url="json/result.json" placeholder="Начинте искать" id="search-input">
-                <input class="search-box__input" type="text" data-url="json/result.json" disabled="disabled" id="search-input-x"><svg  viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <input class="search-box__input" type="text" data-url="json/result.json" disabled="disabled" id="search-input-x">
+                <button type="submit">
+                   <svg  viewBox="0 0 47 47" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M46.272 46.2725L33.5447 33.5452M20.8175 39.9089C10.2739 39.9089 1.72656 31.3616 1.72656 20.818C1.72656 10.2743 10.2739 1.72705 20.8175 1.72705C31.3611 1.72705 39.9084 10.2743 39.9084 20.818C39.9084 31.3616 31.3611 39.9089 20.8175 39.9089Z" stroke="white" stroke-width="2"/>
 </svg>
-              </div>
+                </button>
+              </form>
               <div class="search-box__result"></div>
             </div>
             <div class="search-box__puplar">

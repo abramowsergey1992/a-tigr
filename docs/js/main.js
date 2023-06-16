@@ -127,54 +127,6 @@ function about() {
 	}
 }
 
-function aResidents() {
-	if ($(".service-contact").length) {
-		let prev = $(".service-contacts__slider-prev");
-		let next = $(".service-contacts__slider-next");
-		$(".service-contacts__scroll").on("scroll", function (e) {
-			horizontal = e.currentTarget.scrollLeft;
-
-			let f = $(this).find(".service-contacts__grid").innerWidth();
-			if (horizontal < 50) {
-				prev.addClass("_not-active");
-			} else {
-				prev.removeClass("_not-active");
-			}
-			if (f - 75 < $(this).innerWidth() + horizontal) {
-				next.addClass("_not-active");
-			} else {
-				next.removeClass("_not-active");
-			}
-		});
-		$(".service-contacts__scroll").trigger("scroll");
-		prev.click(function () {
-			console.log("xxx");
-			$(".service-contacts__scroll")
-				.stop()
-				.animate(
-					{
-						scrollLeft:
-							$(".service-contacts__scroll").scrollLeft() - 250,
-					},
-					400
-				);
-		});
-		console.log("32423");
-		next.click(function () {
-			console.log("ccc");
-			$(".service-contacts__scroll")
-				.stop()
-				.animate(
-					{
-						scrollLeft:
-							$(".service-contacts__scroll").scrollLeft() + 250,
-					},
-					400
-				);
-		});
-	}
-}
-
 function contact() {
 	const contactSlider = new Swiper(".contact__slider", {});
 	ymaps.ready(function () {
@@ -339,6 +291,7 @@ function front() {
 	});
 }
 
+$(function(){})
 function global() {
 	if ($(".global-program-slider").length) {
 		const target = new Swiper(".global-program-slider", {
@@ -355,7 +308,6 @@ function global() {
 }
 
 
-$(function(){})
 $(function(){})
 function library() {
 	if ($(".library-slider").length) {
@@ -469,6 +421,95 @@ function strategy() {
 	});
 }
 
+$(function(){})
+function who() {
+	if ($(".who-1__slider").length) {
+		$(".who-1__slider").each(function () {
+			const whoSlider = new Swiper(this, {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				pagination: {
+					el: $(this).find(".who-1__pagy")[0],
+					type: "bullets",
+					clickable: true,
+				},
+			});
+		});
+	}
+	if ($(".grow-slider").length) {
+		$(".grow-slider").each(function () {
+			const growSlider = new Swiper(this, {
+				slidesPerView: 1,
+				spaceBetween: 12,
+				navigation: {
+					nextEl: $(this).find(".grow-slider__next")[0],
+					prevEl: $(this).find(".grow-slider__prev")[0],
+				},
+				mousewheel: {
+					forceToAxis: true,
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+					},
+					640: {
+						slidesPerView: "auto",
+					},
+				},
+			});
+		});
+	}
+}
+
+function aResidents() {
+	if ($(".service-contact").length) {
+		let prev = $(".service-contacts__slider-prev");
+		let next = $(".service-contacts__slider-next");
+		$(".service-contacts__scroll").on("scroll", function (e) {
+			horizontal = e.currentTarget.scrollLeft;
+
+			let f = $(this).find(".service-contacts__grid").innerWidth();
+			if (horizontal < 50) {
+				prev.addClass("_not-active");
+			} else {
+				prev.removeClass("_not-active");
+			}
+			if (f - 75 < $(this).innerWidth() + horizontal) {
+				next.addClass("_not-active");
+			} else {
+				next.removeClass("_not-active");
+			}
+		});
+		$(".service-contacts__scroll").trigger("scroll");
+		prev.click(function () {
+			console.log("xxx");
+			$(".service-contacts__scroll")
+				.stop()
+				.animate(
+					{
+						scrollLeft:
+							$(".service-contacts__scroll").scrollLeft() - 250,
+					},
+					400
+				);
+		});
+		console.log("32423");
+		next.click(function () {
+			console.log("ccc");
+			$(".service-contacts__scroll")
+				.stop()
+				.animate(
+					{
+						scrollLeft:
+							$(".service-contacts__scroll").scrollLeft() + 250,
+					},
+					400
+				);
+		});
+	}
+}
+
+$(function(){})
 function tigr() {
 	if ($(".tigr").length) {
 		let prev = $(".tigr__slider-prev");
@@ -518,47 +559,6 @@ function tigr() {
 					{ scrollLeft: $(".tigr__scroll").scrollLeft() - 250 },
 					400
 				);
-		});
-	}
-}
-
-$(function(){})
-$(function(){})
-function who() {
-	if ($(".who-1__slider").length) {
-		$(".who-1__slider").each(function () {
-			const whoSlider = new Swiper(this, {
-				slidesPerView: 1,
-				spaceBetween: 10,
-				pagination: {
-					el: $(this).find(".who-1__pagy")[0],
-					type: "bullets",
-					clickable: true,
-				},
-			});
-		});
-	}
-	if ($(".grow-slider").length) {
-		$(".grow-slider").each(function () {
-			const growSlider = new Swiper(this, {
-				slidesPerView: 1,
-				spaceBetween: 12,
-				navigation: {
-					nextEl: $(this).find(".grow-slider__next")[0],
-					prevEl: $(this).find(".grow-slider__prev")[0],
-				},
-				mousewheel: {
-					forceToAxis: true,
-				},
-				breakpoints: {
-					320: {
-						slidesPerView: 1,
-					},
-					640: {
-						slidesPerView: "auto",
-					},
-				},
-			});
 		});
 	}
 }
@@ -1373,6 +1373,7 @@ function search() {
 		$(".search-box").fadeIn();
 		setTimeout(function () {}, 100);
 	});
+
 	$("#search-input").autocomplete({
 		serviceUrl: $("#search-input").data("url"),
 		noSuggestionNotice: "Нет результатов ",
@@ -1385,13 +1386,15 @@ function search() {
 			return re.test(suggestion.value);
 		},
 		onSelect: function (suggestion) {
-			alert("You selected: " + suggestion.value + ", " + suggestion.data);
+			setTimeout(() => {
+				$("#search-popup-form").submit();
+			}, 100);
 		},
 		onHint: function (hint) {
 			$("#search-input-x").val(hint);
 		},
 		onInvalidateSelection: function () {
-			$$("#search-input-x").val("");
+			$("#search-input-x").val("");
 		},
 	});
 }

@@ -134,6 +134,24 @@
 		position: relative;
 		max-width: 1240px;
 
+		button {
+			padding: 0;
+			background: transparent;
+			border: 0 solid;
+			cursor: pointer;
+			position: absolute;
+			width: 47px;
+			z-index: 111;
+			right: 26px;
+			bottom: 26px;
+
+			@media(max-width:992px) {
+				width: 30px;
+				right: 10px;
+				bottom: 15px;
+			}
+		}
+
 		input {
 			display: block;
 			width: 100%;
@@ -159,19 +177,7 @@
 			}
 		}
 
-		svg {
-			position: absolute;
-			cursor: none;
-			width: 47px;
-			right: 26px;
-			bottom: 26px;
-
-			@media(max-width:992px) {
-				width: 30px;
-				right: 10px;
-				bottom: 15px;
-			}
-		}
+		svg {}
 	}
 
 	&__puplar {

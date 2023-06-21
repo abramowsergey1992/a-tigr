@@ -321,6 +321,8 @@ form {
 		font-size: 14px;
 		line-height: 20px;
 
+
+
 		&::before {
 			background-image: url("data:image/svg+xml,%3Csvg width='19' height='21' viewBox='0 0 19 21' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M18.0995 10.5L10.8068 17.7926C9.799 18.8004 8.4321 19.3666 7.00682 19.3666C4.03884 19.3666 1.63281 16.9606 1.63281 13.9926C1.63281 12.5673 2.199 11.2004 3.20682 10.1926L10.7168 2.68264C11.3887 2.01076 12.3 1.6333 13.2501 1.6333C15.2288 1.6333 16.8328 3.23732 16.8328 5.21598C16.8328 6.16616 16.4554 7.07743 15.7835 7.74931L8.49082 15.042C8.15487 15.3779 7.69924 15.5666 7.22415 15.5666C6.23482 15.5666 5.43281 14.7646 5.43281 13.7753C5.43281 13.3002 5.62154 12.8446 5.95748 12.5086L13.0328 5.4333' stroke='black' stroke-width='2'/%3E%3C/svg%3E%0A");
 			width: 19px;
@@ -340,6 +342,13 @@ form {
 		display: inline-block;
 		overflow: hidden;
 		position: relative;
+
+		min-width: 260px;
+
+		&:has(input.error) {
+
+			border-color: rgba(192, 34, 34, 1);
+		}
 
 		input {
 			position: absolute;

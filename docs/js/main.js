@@ -1,4 +1,3 @@
-$(function(){})
 function about() {
 	if ($(".target").length) {
 		const target = new Swiper(".target-slider", {
@@ -123,6 +122,55 @@ function about() {
 					$(".sovet__grid").offset().top) *
 				-1;
 			$(".white-about__bg").css("top", mt + "px");
+		});
+	}
+}
+
+$(function(){})
+function aResidents() {
+	if ($(".service-contact").length) {
+		let prev = $(".service-contacts__slider-prev");
+		let next = $(".service-contacts__slider-next");
+		$(".service-contacts__scroll").on("scroll", function (e) {
+			horizontal = e.currentTarget.scrollLeft;
+
+			let f = $(this).find(".service-contacts__grid").innerWidth();
+			if (horizontal < 50) {
+				prev.addClass("_not-active");
+			} else {
+				prev.removeClass("_not-active");
+			}
+			if (f - 75 < $(this).innerWidth() + horizontal) {
+				next.addClass("_not-active");
+			} else {
+				next.removeClass("_not-active");
+			}
+		});
+		$(".service-contacts__scroll").trigger("scroll");
+		prev.click(function () {
+			console.log("xxx");
+			$(".service-contacts__scroll")
+				.stop()
+				.animate(
+					{
+						scrollLeft:
+							$(".service-contacts__scroll").scrollLeft() - 250,
+					},
+					400
+				);
+		});
+		console.log("32423");
+		next.click(function () {
+			console.log("ccc");
+			$(".service-contacts__scroll")
+				.stop()
+				.animate(
+					{
+						scrollLeft:
+							$(".service-contacts__scroll").scrollLeft() + 250,
+					},
+					400
+				);
 		});
 	}
 }
@@ -291,7 +339,6 @@ function front() {
 	});
 }
 
-$(function(){})
 function global() {
 	if ($(".global-program-slider").length) {
 		const target = new Swiper(".global-program-slider", {
@@ -308,6 +355,7 @@ function global() {
 }
 
 
+$(function(){})
 $(function(){})
 function library() {
 	if ($(".library-slider").length) {
@@ -421,95 +469,6 @@ function strategy() {
 	});
 }
 
-$(function(){})
-function who() {
-	if ($(".who-1__slider").length) {
-		$(".who-1__slider").each(function () {
-			const whoSlider = new Swiper(this, {
-				slidesPerView: 1,
-				spaceBetween: 10,
-				pagination: {
-					el: $(this).find(".who-1__pagy")[0],
-					type: "bullets",
-					clickable: true,
-				},
-			});
-		});
-	}
-	if ($(".grow-slider").length) {
-		$(".grow-slider").each(function () {
-			const growSlider = new Swiper(this, {
-				slidesPerView: 1,
-				spaceBetween: 12,
-				navigation: {
-					nextEl: $(this).find(".grow-slider__next")[0],
-					prevEl: $(this).find(".grow-slider__prev")[0],
-				},
-				mousewheel: {
-					forceToAxis: true,
-				},
-				breakpoints: {
-					320: {
-						slidesPerView: 1,
-					},
-					640: {
-						slidesPerView: "auto",
-					},
-				},
-			});
-		});
-	}
-}
-
-function aResidents() {
-	if ($(".service-contact").length) {
-		let prev = $(".service-contacts__slider-prev");
-		let next = $(".service-contacts__slider-next");
-		$(".service-contacts__scroll").on("scroll", function (e) {
-			horizontal = e.currentTarget.scrollLeft;
-
-			let f = $(this).find(".service-contacts__grid").innerWidth();
-			if (horizontal < 50) {
-				prev.addClass("_not-active");
-			} else {
-				prev.removeClass("_not-active");
-			}
-			if (f - 75 < $(this).innerWidth() + horizontal) {
-				next.addClass("_not-active");
-			} else {
-				next.removeClass("_not-active");
-			}
-		});
-		$(".service-contacts__scroll").trigger("scroll");
-		prev.click(function () {
-			console.log("xxx");
-			$(".service-contacts__scroll")
-				.stop()
-				.animate(
-					{
-						scrollLeft:
-							$(".service-contacts__scroll").scrollLeft() - 250,
-					},
-					400
-				);
-		});
-		console.log("32423");
-		next.click(function () {
-			console.log("ccc");
-			$(".service-contacts__scroll")
-				.stop()
-				.animate(
-					{
-						scrollLeft:
-							$(".service-contacts__scroll").scrollLeft() + 250,
-					},
-					400
-				);
-		});
-	}
-}
-
-$(function(){})
 function tigr() {
 	if ($(".tigr").length) {
 		let prev = $(".tigr__slider-prev");
@@ -559,6 +518,47 @@ function tigr() {
 					{ scrollLeft: $(".tigr__scroll").scrollLeft() - 250 },
 					400
 				);
+		});
+	}
+}
+
+$(function(){})
+$(function(){})
+function who() {
+	if ($(".who-1__slider").length) {
+		$(".who-1__slider").each(function () {
+			const whoSlider = new Swiper(this, {
+				slidesPerView: 1,
+				spaceBetween: 10,
+				pagination: {
+					el: $(this).find(".who-1__pagy")[0],
+					type: "bullets",
+					clickable: true,
+				},
+			});
+		});
+	}
+	if ($(".grow-slider").length) {
+		$(".grow-slider").each(function () {
+			const growSlider = new Swiper(this, {
+				slidesPerView: 1,
+				spaceBetween: 12,
+				navigation: {
+					nextEl: $(this).find(".grow-slider__next")[0],
+					prevEl: $(this).find(".grow-slider__prev")[0],
+				},
+				mousewheel: {
+					forceToAxis: true,
+				},
+				breakpoints: {
+					320: {
+						slidesPerView: 1,
+					},
+					640: {
+						slidesPerView: "auto",
+					},
+				},
+			});
 		});
 	}
 }
@@ -766,10 +766,12 @@ function form() {
 	$(".file").each(function () {
 		let inputFile = $(this).find(".file__input");
 		let name = inputFile.data("name");
+		let filewrap = $(this);
 		let files = $(this).find(".file__files");
 		inputFile.on("change", function () {
 			var files = this.files;
-
+			console.log(filewrap);
+			filewrap.find(".file__placeholder").text(files[0].name);
 			for (var i = 0; i < files.length; i++) {
 				var file = files[i];
 

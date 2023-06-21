@@ -36,10 +36,12 @@ function form() {
 	$(".file").each(function () {
 		let inputFile = $(this).find(".file__input");
 		let name = inputFile.data("name");
+		let filewrap = $(this);
 		let files = $(this).find(".file__files");
 		inputFile.on("change", function () {
 			var files = this.files;
-
+			console.log(filewrap);
+			filewrap.find(".file__placeholder").text(files[0].name);
 			for (var i = 0; i < files.length; i++) {
 				var file = files[i];
 

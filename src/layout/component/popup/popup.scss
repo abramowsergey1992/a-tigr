@@ -2,6 +2,10 @@ body._popup-open {
 	overflow: hidden;
 }
 
+#form-anon textarea {
+	height: calc(100vh - 448px);
+}
+
 .popup {
 	position: fixed;
 	left: 0;

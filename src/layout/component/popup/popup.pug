@@ -1,3 +1,16 @@
+#anon-popup.popup
+	.popup__overlay 
+	.popup__content.inner
+		.popup__close  
+			
+		.popup__scroll 
+			h2 Оставить анонимную заявку:
+			form#form-anon(data-error="#error-popup" data-success="#thanks-popup" action="/",method="post")
+				label.input
+					span.input__title Опишите ситуацию
+					textarea(name="comment") 
+				._mt-auto 
+					button.btn-1(type='submit') Отправить
 #feedback-popup.popup
 	.popup__overlay 
 	.popup__content.inner
@@ -27,6 +40,7 @@
 							</svg>
 						.checkbox__text Соглашаюсь с политикой конфиденциальности
 					button.btn-1(type='submit') Отправить
+
 #job-popup.popup
 	.popup__overlay 
 	.popup__content.inner

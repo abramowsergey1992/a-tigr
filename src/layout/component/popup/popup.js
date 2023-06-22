@@ -104,4 +104,33 @@ $(function () {
 			});
 		},
 	});
+	let anon = $("#form-anon").validate({
+		errorPlacement: function (error, element) {},
+		submitHandler: function (form) {
+			$("#form-anon button[type='submit']").attr("disabled", "disabled");
+			$.ajax({
+				url: $(form).attr("action"),
+				data: $(form).serialize(),
+				method: "POST",
+				headers: {
+					"X-CSRF-TOKEN": $('meta[name="csrf-token"]').attr(
+						"content"
+					),
+				},
+				context: document.body,
+				success: function () {
+					popupOpen($("#form-anon").data("success"));
+					$("#form-anon button[type='submit']").removeAttr(
+						"disabled"
+					);
+				},
+				error: function () {
+					popupOpen($("#form-anon").data("error"));
+					$("#form-anon button[type='submit']").removeAttr(
+						"disabled"
+					);
+				},
+			});
+		},
+	});
 });

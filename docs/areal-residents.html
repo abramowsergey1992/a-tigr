@@ -227,7 +227,7 @@
             <p> 
               <color class="_gray">Если вы сообщаете о встрече или о конфликтной ситуации с участием амурского тигра, то оставьте контактные данные, чтобы с вами могли связаться для уточнения деталей. Во всех остальных случаях вы можете сохранить анонимность, но мы просим сообщать как можно больше подробностей, чтобы мы могли разобраться в ситуации и принять необходимые меры.</color>
             </p>
-            <button class="btn-1" data-popup="#anon">Отправить обращение анонимно</button>
+            <button class="btn-1" data-popup="#anon-popup">Отправить обращение анонимно</button>
           </div>
           <div class="dark-text__wh-b-space"></div>
         </div>
@@ -328,6 +328,23 @@
           </div>
         </div>
       </footer>
+      <div class="popup" id="anon-popup">
+        <div class="popup__overlay"> </div>
+        <div class="popup__content inner">
+          <div class="popup__close"> </div>
+          <div class="popup__scroll"> 
+            <h2>Оставить анонимную заявку:</h2>
+            <form id="form-anon" data-error="#error-popup" data-success="#thanks-popup" action="/" method="post">
+              <label class="input"><span class="input__title">Опишите ситуацию</span>
+                <textarea name="comment"> </textarea>
+              </label>
+              <div class="_mt-auto"> 
+                <button class="btn-1" type="submit">Отправить</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
       <div class="popup" id="feedback-popup">
         <div class="popup__overlay"> </div>
         <div class="popup__content inner">

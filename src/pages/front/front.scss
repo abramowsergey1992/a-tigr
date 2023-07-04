@@ -172,8 +172,15 @@
 		mask-repeat: no-repeat;
 		mask-position: 49% 52%;
 
+		[lang="en"] & {
+			mask-image: url(../img/title-eng.svg);
+			mask-size: 1046px;
+			mask-repeat: no-repeat;
+			mask-position: 49% 52%;
+		}
+
 		@media(max-width:1100px) {
-			mask-size: calc(100vw - 80px);
+			mask-size: calc(100vw - 80px) !important;
 		}
 	}
 

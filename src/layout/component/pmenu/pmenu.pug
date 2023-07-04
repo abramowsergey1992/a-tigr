@@ -1,7 +1,22 @@
 .pmenu 
 	.pmenu__bg 
-		+picture('pmenu','jpg')
+		+picture('pmenu-new','jpeg')
 	.pmenu__grid
+		.pmenu__item
+			.pmenu__item-inner
+				ul.pmenu__parent-biglist 
+					li 
+						a(href="about.html") О нас
+					li 
+						a(href="press-centr.html") Пресс-центр
+					li 
+						a(href="help.html") Как помочь?
+					li 
+						a(href="areal-residents.html") Жителям ареала
+							br
+							|  тигра
+					li 
+						a(href="library.html") Библиотека
 		.pmenu__item
 			.pmenu__item-inner
 				.pmenu__item-head
@@ -50,21 +65,7 @@
 					li 
 						a(href="history-vladivostok.html") История здания Дальневосточного филиала
 			
-		.pmenu__item
-			.pmenu__item-inner
-				ul.pmenu__parent-biglist 
-					li 
-						a(href="areal-residents.html") Жителям ареала
-							br
-							|  тигра
-					li 
-						a(href="help.html") Как помочь?
-					li 
-						a(href="about.html") О нас
-					li 
-						a(href="press-centr.html") Пресс-центр
-					li 
-						a(href="library.html") Библиотека
+	
 	.pmenu__footer.inner 
 		ul.pmenu__contact
 			li 

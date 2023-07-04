@@ -1,4 +1,7 @@
 $(function () {
+	Fancybox.bind("[data-fancybox]", {
+		// Your custom options
+	});
 	// gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
 
 	// scroller = ScrollSmoother.create({

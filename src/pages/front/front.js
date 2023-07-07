@@ -42,16 +42,32 @@ function front() {
 			})
 		)
 		.addTo(controller);
-	new ScrollMagic.Scene({
-		duration: procent(90, smScroll),
-	})
-		.setTween(
-			TweenMax.to(".front-top__back-mask ", 1, {
-				maskSize: 80000,
-				ease: Linear.easeIn,
-			})
-		)
-		.addTo(controller);
+	if ($("html").attr("lang") == "en") {
+		new ScrollMagic.Scene({
+			duration: procent(70, smScroll),
+		})
+			.setTween(
+				TweenMax.to(".front-top__back-mask ", 1, {
+					maskSize: 85000,
+					maskPosition: "49.5% 75%	",
+
+					ease: Linear.easeIn,
+				})
+			)
+			.addTo(controller);
+	} else {
+		new ScrollMagic.Scene({
+			duration: procent(90, smScroll),
+		})
+			.setTween(
+				TweenMax.to(".front-top__back-mask ", 1, {
+					maskSize: 80000,
+
+					ease: Linear.easeIn,
+				})
+			)
+			.addTo(controller);
+	}
 	new ScrollMagic.Scene({
 		duration: procent(90, smScroll),
 	})

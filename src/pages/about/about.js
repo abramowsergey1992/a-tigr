@@ -16,7 +16,7 @@ function about() {
 			spaceBetween: 16,
 			loopAdditionalSlides: 5,
 			slidesPerView: "auto",
-			loop: true,
+
 			navigation: {
 				nextEl: $(".sovet__next")[0],
 				prevEl: $(".sovet__prev")[0],

@@ -368,6 +368,11 @@
 		background: #fff;
 		cursor: pointer;
 
+		&.swiper-button-disabled {
+			opacity: 0.6;
+			pointer-events: none;
+		}
+
 		svg {
 			width: 19px;
 		}

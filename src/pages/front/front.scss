@@ -60,6 +60,18 @@
 
 		&-wrap {
 			transform: translateY(100%);
+
+			&._white {
+				[layout="black"] & {
+					display: none;
+				}
+			}
+
+			&._black {
+				[layout="white"] & {
+					display: none;
+				}
+			}
 		}
 	}
 
@@ -177,10 +189,14 @@
 			mask-size: 1046px;
 			mask-repeat: no-repeat;
 			mask-position: 49% 52%;
+
+			@media(max-width:1100px) {
+				mask-size: calc(100vw - 80px);
+			}
 		}
 
 		@media(max-width:1100px) {
-			mask-size: calc(100vw - 80px) !important;
+			mask-size: calc(100vw - 80px);
 		}
 	}
 

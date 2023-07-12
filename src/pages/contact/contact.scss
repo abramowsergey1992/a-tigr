@@ -21,13 +21,18 @@
 	opacity: 0;
 	transform: scale(1.2);
 
+	&._open {
+		transform: scale(1);
+		opacity: 1;
+	}
+
 	@media(max-width:992px) {
 		&._open {
 			position: relative;
 			z-index: 44;
 		}
 
-		width: initial;
+		width: 100%;
 		height: calc(100svh - 150px);
 	}
 
@@ -35,8 +40,7 @@
 	opacity 0.3s;
 
 
-	transform: scale(1);
-	opacity: 1;
+
 }
 
 

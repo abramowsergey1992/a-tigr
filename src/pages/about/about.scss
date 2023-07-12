@@ -515,6 +515,11 @@
 	&__prev,
 	&__next {
 		cursor: pointer;
+
+		&.swiper-button-disabled {
+			opacity: 0.2;
+			pointer-events: none;
+		}
 	}
 
 	&__prev {

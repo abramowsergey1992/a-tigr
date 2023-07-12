@@ -37,6 +37,9 @@ function filters() {
 		let more = wrapper.find("[data-filtermore]");
 		let i = 0;
 		let c = 0;
+		const url = new URL(location.href);
+		url.searchParams.set("filter", filter);
+		history.pushState(null, "", url);
 		if (wrapper.data("pagecount")) {
 			wrapper.find(".filters__button").removeClass("_active");
 			$(this).addClass("_active");
@@ -88,6 +91,28 @@ function filters() {
 		}
 		filterBg();
 	});
+	var container = {};
+	location.search
+		.split("&")
+		.toString()
+		.substr(1)
+		.split(",")
+		.forEach((item) => {
+			container[item.split("=")[0]] = decodeURIComponent(
+				item.split("=")[1]
+			)
+				? item.split("=")[1]
+				: "No query strings available";
+		});
+	if (container.filter) {
+		console.log($('button[data-filter="' + container.filter + '"'));
+		console.log('button[data-filter="' + container.filter + '"');
+		$('button[data-filter="' + container.filter + '"').trigger("click");
+	} else {
+		$(".filters__button._active").first().trigger("click");
+		$(".filters__button._active").first().click();
+	}
+
 	$("[data-filtermore]").click(function () {
 		let wrapper = $(this).closest(".filter-block");
 		let filter = wrapper.find(".filters__button._active").data("filter");
@@ -117,6 +142,4 @@ function filters() {
 			more.addClass("_d-none");
 		}
 	});
-	$(".filters__button._active").first().trigger("click");
-	$(".filters__button._active").first().click();
 }

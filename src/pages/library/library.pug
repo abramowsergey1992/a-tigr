@@ -12,10 +12,10 @@ block content
 						.filters
 							.filters__bg
 							button.filters__button._active(type="button",data-filter="all") Библиотека
-							button.filters__button(type="button",data-filter="Все материалы") Для всех
-							button.filters__button(type="button",data-filter="Для специалистов") Специалистам
-							button.filters__button(type="button",data-filter="Для детей и родителей") Детям
-							button.filters__button(type="button",data-filter="Отчёты") Отчёты
+							button.filters__button(type="button",data-filter="f3") Для всех
+							button.filters__button(type="button",data-filter="f2") Специалистам
+							button.filters__button(type="button",data-filter="f4") Детям
+							button.filters__button(type="button",data-filter="f7") Отчёты
 			.library-slider.swiper 
 				.swiper-wrapper 
 					.swiper-slide
@@ -24,7 +24,7 @@ block content
 								.library-slider__item-photo 
 									+picture('lib-1','jpg')
 								.library-slider__item-content
-									.library-slider__item-category Для детей и родителей
+									.library-slider__item-category f4
 									.library-slider__item-title Журнал «Мурзилка»
 									.library-slider__item-desc 
 										p Специальный «тигриный» номер журнала «Мурзилка», приуроченный к празднованию Дня тигра во Владивостоке.
@@ -34,7 +34,7 @@ block content
 								.library-slider__item-photo 
 									+picture('lib-2','jpg')
 								.library-slider__item-content
-									.library-slider__item-category Для детей и родителей
+									.library-slider__item-category f4
 									.library-slider__item-title «У меня дома живёт амурский тигр»
 									.library-slider__item-desc 
 										p Сборник лучших писем и рисунков, поданных  на конкурс детских писем «Лучший урок письма»  в номинации «У меня дома живёт амурский тигр».
@@ -44,7 +44,7 @@ block content
 								.library-slider__item-photo 
 									+picture('lib-3','jpg')
 								.library-slider__item-content
-									.library-slider__item-category Для детей и родителей
+									.library-slider__item-category f4
 									.library-slider__item-title Сборник сказок «Полоска к полоске»
 									.library-slider__item-desc 
 										p Сборник из 10 сказок, написанных детьми: юные авторы сочиняли сказки для проекта детского издательства «Совёнок»
@@ -54,7 +54,7 @@ block content
 								.library-slider__item-photo 
 									+picture('lib-1','jpg')
 								.library-slider__item-content
-									.library-slider__item-category Для детей и родителей
+									.library-slider__item-category f4
 									.library-slider__item-title Журнал «Мурзилка»
 									.library-slider__item-desc 
 										p Специальный «тигриный» номер журнала «Мурзилка», приуроченный к празднованию Дня тигра во Владивостоке.
@@ -64,7 +64,7 @@ block content
 								.library-slider__item-photo 
 									+picture('lib-2','jpg')
 								.library-slider__item-content
-									.library-slider__item-category Для детей и родителей
+									.library-slider__item-category f4
 									.library-slider__item-title «У меня дома живёт амурский тигр»
 									.library-slider__item-desc 
 										p Сборник лучших писем и рисунков, поданных  на конкурс детских писем «Лучший урок письма»  в номинации «У меня дома живёт амурский тигр».
@@ -74,7 +74,7 @@ block content
 								.library-slider__item-photo 
 									+picture('lib-3','jpg')
 								.library-slider__item-content
-									.library-slider__item-category Для детей и родителей
+									.library-slider__item-category f4
 									.library-slider__item-title Сборник сказок «Полоска к полоске»
 									.library-slider__item-desc 
 										p Сборник из 10 сказок, написанных детьми: юные авторы сочиняли сказки для проекта детского издательства «Совёнок»
@@ -88,35 +88,35 @@ block content
 					</svg>
 			.library-grid
 				+library('lib-4' , category="Для широкого круга","Амурский тигр. Некоронованный властелин тайги",link="#")
-				+library('' , category="Для специалистов","Сборник докладов I Тихоокеанского юридического форума",link="#")
-				+library('lib-5' , category="Для специалистов","Материалы конференции «Противодействие экологическим преступлениям»",link="#")
-				+library('' , category="Для специалистов","Сборник докладов I Тихоокеанского юридического форума",link="#")
-				+library('lib-6' , category="Для детей и родителей","Приключения тигрёнка Амурчика",link="#")
-				+library('lib-7' , category="Для детей и родителей","Сборник сказок «Тигриные истории»",link="#")
-				+library('lib-8' , category="Для детей и родителей","Каталог работ выставки «Тигриная история» (категория «Дети»)",link="#")
+				+library('' , category="f2","Сборник докладов I Тихоокеанского юридического форума",link="#")
+				+library('lib-5' , category="f2","Материалы конференции «Противодействие экологическим преступлениям»",link="#")
+				+library('' , category="f2","Сборник докладов I Тихоокеанского юридического форума",link="#")
+				+library('lib-6' , category="f4","Приключения тигрёнка Амурчика",link="#")
+				+library('lib-7' , category="f4","Сборник сказок «Тигриные истории»",link="#")
+				+library('lib-8' , category="f4","Каталог работ выставки «Тигриная история» (категория «Дети»)",link="#")
 				+library('lib-9' , category="Для широкого круга","Амурский тигр. Домыслы, легенды, факты. Том 1",link="#")
 				+library('lib-4' , category="Для широкого круга","Амурский тигр. Некоронованный властелин тайги",link="#")
-				+library('' , category="Для специалистов","Сборник докладов I Тихоокеанского юридического форума",link="#")
-				+library('lib-5' , category="Для специалистов","Материалы конференции «Противодействие экологическим преступлениям»",link="#")
-				+library('' , category="Для специалистов","Сборник докладов I Тихоокеанского юридического форума",link="#")
-				+library('lib-6' , category="Для детей и родителей","Приключения тигрёнка Амурчика",link="#")
-				+library('lib-7' , category="Для детей и родителей","Сборник сказок «Тигриные истории»",link="#")
-				+library('lib-8' , category="Для детей и родителей","Каталог работ выставки «Тигриная история» (категория «Дети»)",link="#")
+				+library('' , category="f2","Сборник докладов I Тихоокеанского юридического форума",link="#")
+				+library('lib-5' , category="f2","Материалы конференции «Противодействие экологическим преступлениям»",link="#")
+				+library('' , category="f2","Сборник докладов I Тихоокеанского юридического форума",link="#")
+				+library('lib-6' , category="f4","Приключения тигрёнка Амурчика",link="#")
+				+library('lib-7' , category="f4","Сборник сказок «Тигриные истории»",link="#")
+				+library('lib-8' , category="f4","Каталог работ выставки «Тигриная история» (категория «Дети»)",link="#")
 				+library('lib-9' , category="Для широкого круга","Амурский тигр. Домыслы, легенды, факты. Том 1",link="#")
 				+library('lib-4' , category="Для широкого круга","Амурский тигр. Некоронованный властелин тайги",link="#")
-				+library('' , category="Для специалистов","Сборник докладов I Тихоокеанского юридического форума",link="#")
-				+library('lib-5' , category="Для специалистов","Материалы конференции «Противодействие экологическим преступлениям»",link="#")
-				+library('' , category="Для специалистов","Сборник докладов I Тихоокеанского юридического форума",link="#")
-				+library('lib-6' , category="Для детей и родителей","Приключения тигрёнка Амурчика",link="#")
-				+library('lib-7' , category="Для детей и родителей","Сборник сказок «Тигриные истории»",link="#")
-				+library('lib-8' , category="Для детей и родителей","Каталог работ выставки «Тигриная история» (категория «Дети»)",link="#")
+				+library('' , category="f2","Сборник докладов I Тихоокеанского юридического форума",link="#")
+				+library('lib-5' , category="f2","Материалы конференции «Противодействие экологическим преступлениям»",link="#")
+				+library('' , category="f2","Сборник докладов I Тихоокеанского юридического форума",link="#")
+				+library('lib-6' , category="f4","Приключения тигрёнка Амурчика",link="#")
+				+library('lib-7' , category="f4","Сборник сказок «Тигриные истории»",link="#")
+				+library('lib-8' , category="f4","Каталог работ выставки «Тигриная история» (категория «Дети»)",link="#")
 				+library('lib-9' , category="Для широкого круга","Амурский тигр. Домыслы, легенды, факты. Том 1",link="#")
 				+library('lib-4' , category="Для широкого круга","Амурский тигр. Некоронованный властелин тайги",link="#")
-				+library('' , category="Для специалистов","Сборник докладов I Тихоокеанского юридического форума",link="#")
-				+library('lib-5' , category="Для специалистов","Материалы конференции «Противодействие экологическим преступлениям»",link="#")
-				+library('' , category="Для специалистов","Сборник докладов I Тихоокеанского юридического форума",link="#")
-				+library('lib-6' , category="Для детей и родителей","Приключения тигрёнка Амурчика",link="#")
-				+library('lib-7' , category="Для детей и родителей","Сборник сказок «Тигриные истории»",link="#")
-				+library('lib-8' , category="Для детей и родителей","Каталог работ выставки «Тигриная история» (категория «Дети»)",link="#")
+				+library('' , category="f2","Сборник докладов I Тихоокеанского юридического форума",link="#")
+				+library('lib-5' , category="f2","Материалы конференции «Противодействие экологическим преступлениям»",link="#")
+				+library('' , category="f2","Сборник докладов I Тихоокеанского юридического форума",link="#")
+				+library('lib-6' , category="f4","Приключения тигрёнка Амурчика",link="#")
+				+library('lib-7' , category="f4","Сборник сказок «Тигриные истории»",link="#")
+				+library('lib-8' , category="f4","Каталог работ выставки «Тигриная история» (категория «Дети»)",link="#")
 				+library('lib-9' , category="Для широкого круга","Амурский тигр. Домыслы, легенды, факты. Том 1",link="#")
 			button.library-more.btn-1(type="button",data-filtermore) Показать ещё

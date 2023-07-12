@@ -62,6 +62,12 @@
 			transform: translateY(100%);
 
 			&._white {
+				color: $black ;
+
+				.btn-1 {
+					color: $black
+				}
+
 				[layout="black"] & {
 					display: none;
 				}

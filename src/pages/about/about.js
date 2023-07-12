@@ -37,7 +37,6 @@ function about() {
 			},
 			spaceBetween: 16,
 			slidesPerView: 4,
-			loop: true,
 			breakpoints: {
 				320: {
 					slidesPerView: "auto",

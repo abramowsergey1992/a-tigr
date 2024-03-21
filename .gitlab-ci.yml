@@ -1,0 +1,7 @@
+variables:
+    APPLICATION: test
+    GIT_SSL_NO_VERIFY: "1"
+
+include:
+    - project: gitflow/ci-cd
+      file: /rsync.yml

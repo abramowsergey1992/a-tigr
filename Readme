@@ -1,0 +1,5 @@
+Установка `npm install`
+Запуск сборки `gulp`
+Отчистить папку и пересобрать `gulp build`
+Создать страницу `gulp create --p name`
+Создать компонент `gulp create --c names`

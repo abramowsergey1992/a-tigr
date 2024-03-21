@@ -349,7 +349,9 @@
 		transition: color 0.3s;
 
 		.pmenu__item:hover & {
-			color: #fff
+			@media(min-width:992px) {
+				color: #fff
+			}
 		}
 
 		&:hover {

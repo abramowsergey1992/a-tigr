@@ -11,6 +11,7 @@
 		color: var(--color);
 		background: var(--bg);
 		line-height: 28px;
+		z-index: 30;
 
 		@media(max-width:1025px) {
 			padding: 6px 10px;
@@ -127,16 +128,33 @@
 				top: 0;
 				width: 100%;
 				height: 100%;
-				object-fit: cover;
+				object-fit: contain;
 			}
 
 			&::before {
 				display: block;
 				content: '';
 				z-index: 3;
-				background: rgba($color: #000000, $alpha: 0.3);
+
+				.blackzone & {
+					background: rgba($color: #000000, $alpha: 0.3);
+				}
+
 				padding-bottom: 53.5%;
+
+				@media(max-width:900px) {
+					position: absolute;
+					left: 0;
+					top: 0;
+					width: 100%;
+					height: 100%;
+
+				}
 			}
 		}
 	}
+}
+
+.another-news {
+	margin-bottom: 10px;
 }

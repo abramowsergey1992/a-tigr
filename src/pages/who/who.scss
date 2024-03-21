@@ -1,3 +1,16 @@
+.accordions+.gray-box {
+	margin-top: -93px;
+
+
+
+
+
+
+	@media(max-width:812px) {
+		margin-top: -82px;
+	}
+}
+
 .who-1 {
 	&__grid {
 		display: grid;
